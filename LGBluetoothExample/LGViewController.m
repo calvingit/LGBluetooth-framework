@@ -6,12 +6,12 @@
 //
 
 #import "LGViewController.h"
-#import "SVProgressHUD.h"
 #import "LGCommandsViewController.h"
 #import "LGFirmwareViewController.h"
 #import "LGWriteSerialNumberController.h"
 @import JDStatusBarNotification;
 @import LGBluetooth;
+@import SVProgressHUD;
 #define kCellReuseIdentifier @"CellReuseIdentifier"
 
 @import CoreBluetooth;
@@ -85,7 +85,7 @@
     if (![searchText isEqualToString:@""]) {
         NSMutableArray *array = [NSMutableArray array];
         for (LGPeripheral *p in self.scanedPeripherals) {
-            if ([p.name rangeOfString:searchText].length > 0) {
+            if ([p.name rangeOfString:searchText.uppercaseString].length > 0) {
                 [array addObject:p];
             }
         }
