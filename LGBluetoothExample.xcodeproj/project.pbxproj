@@ -441,9 +441,9 @@
 				INFOPLIST_FILE = "LGBluetoothExample/LGBluetoothExample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cloudtootech.LGBluetooth;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cloudtootech.lgbluetoothoutgoing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e1893009-89ab-450d-8dcf-52fc187c30d4";
+				PROVISIONING_PROFILE = "abc60dcf-ac0c-4f92-bd23-0514ab23d2f9";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -468,9 +468,9 @@
 				INFOPLIST_FILE = "LGBluetoothExample/LGBluetoothExample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cloudtootech.LGBluetooth;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cloudtootech.lgbluetoothoutgoing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f3ed31e9-4822-4e92-8432-b2ad9345e7e3";
+				PROVISIONING_PROFILE = "b78e5d40-246d-4fed-b4f3-4993d22add4a";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

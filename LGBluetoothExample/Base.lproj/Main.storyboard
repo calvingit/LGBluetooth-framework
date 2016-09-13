@@ -264,7 +264,7 @@
             </objects>
             <point key="canvasLocation" x="355" y="367.99999999999994"/>
         </scene>
-        <!--Functions Controller-->
+        <!--云图外发工具-->
         <scene sceneID="zd7-ZU-LU1">
             <objects>
                 <tableViewController id="dFH-jB-ana" customClass="LGFunctionsController" sceneMemberID="viewController">
@@ -302,7 +302,7 @@
                             <outlet property="delegate" destination="dFH-jB-ana" id="QBP-4S-4cZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="pnR-Pv-VR5"/>
+                    <navigationItem key="navigationItem" title="云图外发工具" id="pnR-Pv-VR5"/>
                     <connections>
                         <segue destination="Ec2-Br-jIN" kind="push" identifier="PushDeviceSegue" id="vVS-Rm-lsz"/>
                     </connections>

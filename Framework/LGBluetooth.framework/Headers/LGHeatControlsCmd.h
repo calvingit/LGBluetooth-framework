@@ -13,17 +13,21 @@
  */
 typedef NS_ENUM(NSInteger, LGBodyPart) {
     /**
-     *  腰部
-     */
-    LGBodyPartWaist    = 0,
-    /**
      *  肩部
      */
-    LGBodyPartShoulder = 1,
+    LGBodyPartShoulder = 0,
     /**
      *  腹部
      */
-    LGBodyPartAbdomen  = 2,
+    LGBodyPartAbdomen = 1,
+    /**
+     *  腰部
+     */
+    LGBodyPartWaist = 2,
+    /**
+     *  全身(获取用)
+     */
+    LGBodyPartAll = 3,
 };
 
 /**
