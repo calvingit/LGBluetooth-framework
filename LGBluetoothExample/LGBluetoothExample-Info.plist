@@ -24,6 +24,12 @@
 	<string>8</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>蓝牙功能</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>日历功能</string>
+	<key>NSContactsUsageDescription</key>
+	<string>联系人功能</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-central</string>

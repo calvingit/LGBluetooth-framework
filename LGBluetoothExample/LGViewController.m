@@ -17,8 +17,8 @@
 @import CoreBluetooth;
 @interface LGViewController ()<UISearchBarDelegate>
 
-@property (nonatomic, strong) NSArray *peripherals;
-@property (nonatomic, strong) NSArray *scanedPeripherals;
+@property (nonatomic, strong) NSMutableArray *peripherals;
+@property (nonatomic, strong) NSMutableArray *allPeripherals;
 @end
 
 @implementation LGViewController
@@ -27,14 +27,15 @@
     if (self = [super initWithCoder:aDecoder]) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(centralUpdateStateNotification:) name:kCBCentralManagerStateNotification object:nil];
         _peripherals = [NSMutableArray array];
+        _allPeripherals = [NSMutableArray array];
     }
     return self;
 }
 
 - (void)centralUpdateStateNotification:(NSNotification *)notificaion{
-    NSNumber *state = notificaion.object;
+    LGCentralManager *manager = notificaion.object;
     
-    if (state.boolValue) {
+    if (manager.poweredOn) {
         [JDStatusBarNotification dismiss];
     }else{
         [JDStatusBarNotification showWithStatus:@"请打开蓝牙设置"];
@@ -59,32 +60,24 @@
 //开始扫描
 - (void)scanForPeripherals{
     [SVProgressHUD showWithStatus:@"扫描中...."];
+    [self.allPeripherals removeAllObjects];
     //获取已连接的设备，这些设备是不会广播的，所以不能通过scan来获取
-    [[LGCentralManager sharedInstance] retrieveConnectedPeripheralsWithServices:@[kDefaultServiceUUID]];
+    NSArray *connectedPeripherals = [[LGCentralManager sharedInstance] retrieveConnectedPeripheralsWithServices:@[kDefaultServiceUUID]];
+    [self.allPeripherals addObjectsFromArray:connectedPeripherals];
     //开启扫描
     [[LGCentralManager sharedInstance] scanPeripheralsWithServices:@[kDefaultServiceUUID] interval:3 completion:^(LGCentralManager *manager, NSArray *scanedPeripherals) {
-        self.scanedPeripherals = scanedPeripherals;
-        self.peripherals = scanedPeripherals;
-        [self.tableView reloadData];
+        [self.allPeripherals addObjectsFromArray:scanedPeripherals];
+        [self filterPeripheralsWithText:nil];
         [SVProgressHUD dismiss];
     }];
-    
-//    //开始扫描设备
-//    [[LGCentralManager sharedInstance] scanPeripheralsWithServices:@[kDefaultServiceUUID]];
-//    //扫描3秒钟
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        //停止扫描, 如果不停止，将会一直扫描，占用资源。
-//        [[LGCentralManager sharedInstance] stopScanForPeripherals];
-//        //扫描结束之后，可以直接读取peripherals属性获取LGPeripheral对象
-//        NSArray *scanedPeripherals = [LGCentralManager sharedInstance].peripherals;
-//    });
 }
 
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
-    searchText = [searchText stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    if (![searchText isEqualToString:@""]) {
+// 搜索过滤
+- (void)filterPeripheralsWithText:(NSString *)text{
+    NSString *searchText = [text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    if (searchText.length > 0) {
         NSMutableArray *array = [NSMutableArray array];
-        for (LGPeripheral *p in self.scanedPeripherals) {
+        for (LGPeripheral *p in self.allPeripherals) {
             if ([p.name rangeOfString:searchText.uppercaseString].length > 0) {
                 [array addObject:p];
             }
@@ -92,9 +85,14 @@
         self.peripherals = array;
         [self.tableView reloadData];
     }else{
-        self.peripherals = self.scanedPeripherals;
+        self.peripherals = self.allPeripherals;
         [self.tableView reloadData];
     }
+}
+
+#pragma mark - UISearchBarDelegate
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    [self filterPeripheralsWithText:searchText];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{

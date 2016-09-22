@@ -83,7 +83,18 @@
     }];
 }
 
+
+/**
+ 扫描升级设备，如果扫描不到，重复kMaxRetryCount次
+ */
 - (void)scanDFUDevice{
+    self.retryCount += 1;
+    if (self.retryCount == kMaxRetryCount){
+        if ([self.delegate respondsToSelector:@selector(DFUManager:didErrorOccurWithMessage:)]) {
+            [self.delegate DFUManager:self didErrorOccurWithMessage:@"No OTA peripherals scaned"];
+        }
+        return;
+    }
     [self resetDelegate];
     [[LGCentralManager sharedInstance] scanPeripheralsWithServices:@[kDFUServiceUUID] interval:5 completion:^(LGCentralManager *manager, NSArray *scanedPeripherals) {
         for (LGPeripheral *peripheral in scanedPeripherals) {
@@ -93,7 +104,7 @@
                 return;
             }
         }
-        [self didErrorOccur:0 withMessage:@"No OTA peripherals scaned"];
+        [self scanDFUDevice];
     }];
 }
 
@@ -156,14 +167,10 @@ currentSpeedBytesPerSecond:(double)speed avgSpeedBytesPerSecond:(double)avgSpeed
 
 -(void)didErrorOccur:(enum DFUError)error withMessage:(NSString *)message{
     NSLog(@"DFU error: %@", message);
-    self.retryCount += 1;
-    if (self.retryCount < kMaxRetryCount){
-        [self scanDFUDevice];
-    }else{
-        if ([self.delegate respondsToSelector:@selector(DFUManager:didErrorOccurWithMessage:)]) {
-            [self.delegate DFUManager:self didErrorOccurWithMessage:message];
-        }
-    }
+    //延迟两秒后再次执行，这里不需要搜索设备了，已经保存在self.upgradePeripheral
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self performDFUWithPeripheral:self.upgradePeripheral.cbPeripheral];
+    });
 }
 
 

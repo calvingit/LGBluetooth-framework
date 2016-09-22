@@ -16,6 +16,15 @@
  */
 FOUNDATION_EXPORT NSString *const kCBCentralManagerStateNotification;
 
+
+/**
+ 扫描回调
+
+ @param manager           LGCentralManager
+ @param scanedPeripherals 所有扫描到的设备，按信号强度升序排列
+ */
+typedef void(^LGCentralManagerScanningBlock)(LGCentralManager *manager, NSArray *scanedPeripherals);
+
 /**
  * 蓝牙模块封装，对App来说只需要一个中央管理器，所以做成单例模式
  */
@@ -31,15 +40,15 @@ FOUNDATION_EXPORT NSString *const kCBCentralManagerStateNotification;
 @property (nonatomic, getter = isScanning) BOOL scanning;
 
 /**
- * 蓝牙状态, 是否打开
+ * 蓝牙开关状态, YES:打开，NO:关闭
  */
-@property (assign, nonatomic, readonly, getter = isPoweredOn) BOOL poweredOn;
-
+@property (assign, nonatomic, readonly) BOOL poweredOn;
 
 /**
- *  扫描的所有设备，按信号强度从高到低排序
+ *  蓝牙未授权状态, YES:未授权, NO:已授权
+ *  iOS 10之后需要在info.plist里面添加NSBluetoothPeripheralUsageDescription
  */
-@property (strong, nonatomic, readonly) NSArray *peripherals;
+@property (assign, nonatomic, readonly) BOOL unauthorized;
 
 /**
  *  App启动时进行初始化
@@ -47,11 +56,11 @@ FOUNDATION_EXPORT NSString *const kCBCentralManagerStateNotification;
 + (void)startUp;
 
 /**
- *  根据LGPeripheral的UUIDString获取设备
+ *  根据LGPeripheral的UUIDString获取已连接设备
  *
- *  @param uuids CBPeripheral的UUID
+ *  @param uuids 可以是多个设备
  *
- *  @return 设备
+ *  @return 已连接设备
  */
 - (NSArray<LGPeripheral *> *)retrievePeripheralsWithIdentifiers:(NSArray<NSString *> *)UUIDs;
 
@@ -67,20 +76,13 @@ FOUNDATION_EXPORT NSString *const kCBCentralManagerStateNotification;
 /**
  *  扫描指定服务的设备
  *
- *  @param serviceUUIDs    包含数组内任一服务的设备都会搜索到；可以为空，将扫描任何设备
- */
-- (void)scanPeripheralsWithServices:(NSArray<NSString *> *)serviceUUIDs;
-
-/**
- *  扫描指定服务的设备
- *
  *  @param serviceUUIDs 包含数组内任一服务的设备都会搜索到；可以为空，将扫描任何设备
  *  @param interval     扫描时间
  *  @param completion   扫描结束返回所有设备
  */
 - (void)scanPeripheralsWithServices:(NSArray<NSString *> *)serviceUUIDs
                            interval:(NSTimeInterval)interval
-                         completion:(void(^)(LGCentralManager *manager, NSArray *scanedPeripherals))completion;
+                         completion:(LGCentralManagerScanningBlock)completion;
 
 /**
  *  停止扫描

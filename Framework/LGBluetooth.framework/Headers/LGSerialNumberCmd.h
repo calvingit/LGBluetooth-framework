@@ -36,8 +36,16 @@
 //请勿随意使用这个功能，如果设置成功，请到蓝牙设置列表里面忽略已连接的设备。
 - (instancetype)setSN:(NSString *)sn success:(LGBlockWithVoid)success failure:(LGBlockWithError)failure;
 
+/**
+ *  序列号生成
+ *
+ *  @param manufacturer PPP:供应商名字( 生产商为YTW)
+ *  @param productCode  产品/供应商归类码，主要用于产品的统一和归类扩展用(111 为相应归类码)
+ *  @param date         生产日期
+ *  @param ID           ID 号（3 位），最大整数为33*33*33,如果为负数则随机生成
+ *
+ *  @return sn
+ */
++ (NSString *)snWithManufacturer:(NSString *)manufacturer productCode:(NSString *)productCode date:(NSDate *)date ID:(NSInteger)ID;
 @end
-
-
-
 
