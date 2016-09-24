@@ -6,6 +6,7 @@
 LGSerialNumberCmd就是用来读取序列号的，回调直接返回一个NSString。
 
 使用方法如下：
+
 ```
 LGSerialNumberCmd *cmd = [LGSerialNumberCmd commandWithAgent:self.agent];
 [[cmd readSNWithSuccess:^(NSString *string) {
@@ -23,7 +24,9 @@ LGSerialNumberCmd *cmd = [LGSerialNumberCmd commandWithAgent:self.agent];
 ```
 typedef void(^LGFirmwareInformationBlock)(BOOL bindingStatus, NSInteger batteryPower, NSString *version);
 ```
+
 使用方法如下:
+
 ```
 LGFirmwareInformationCmd *cmd = [LGFirmwareInformationCmd commandWithAgent:self.agent];
 [[cmd readFirmwareInformationWithSuccess:^(BOOL bindingStatus, NSInteger batteryPower, NSString *version) {
@@ -42,6 +45,7 @@ LGFirmwareInformationCmd *cmd = [LGFirmwareInformationCmd commandWithAgent:self.
 然后在App里面弹出输入框，让用户输入看到的4个字符。如果输入正确，即表示他手里的设备正是想要连接的设备，这时可以发送另外一个确认配对码的命令，即LGComfirmPairingCodeCmd。
 
 使用方法如下:
+
 ```
 LGPairingCodeCmd *cmd = [LGPairingCodeCmd commandWithAgent:self.agent];
 [[cmd readCodeWithSuccess:^(NSString *string) {
@@ -53,7 +57,9 @@ LGPairingCodeCmd *cmd = [LGPairingCodeCmd commandWithAgent:self.agent];
 
 ## 确认配对码(LGComfirmPairingCodeCmd)
 和LGPairingCodeCmd是一起的，它的作用就是告诉设备退出配对码界面，不再显示配对码。
+
 使用方法如下:
+
 ```
 LGComfirmPairingCodeCmd *cmd = [LGComfirmPairingCodeCmd commandWithAgent:self.agent];
 [cmd startWithSuccess:^{
@@ -67,6 +73,7 @@ LGComfirmPairingCodeCmd *cmd = [LGComfirmPairingCodeCmd commandWithAgent:self.ag
 所有数据、时间都将被清空，如需再次使用设备，请做相关设置。
 
 使用方法如下:
+
 ```
 LGRestoreFactorySettingsCmd *cmd = [LGRestoreFactorySettingsCmd commandWithAgent:self.agent];
 [cmd startWithSuccess:^{
@@ -74,6 +81,19 @@ LGRestoreFactorySettingsCmd *cmd = [LGRestoreFactorySettingsCmd commandWithAgent
 } failure:^(NSError *error) {
     [self showAlert:_commands[row] msg: error.description];
 }];
+```
+## 读取GPS信息 (LGGPSInfoCmd)
+这条命令具有不确定值，由固件端决定，所以只返回数据字段，需要自己解析NSData。
+
+```
+LGGPSInfoCmd *cmd = [LGGPSInfoCmd commandWithAgent:self.agent];
+[cmd readInfoWithSuccess:^(NSData *data) {
+    NSLog(@"GPS Info:%@", data);
+    [SVProgressHUD dismiss];
+} failure:^(NSError *error) {
+    [self showAlert:_commands[row] msg:error.localizedDescription];
+}];
+[cmd start];
 ```
 
 ## 进入升级模式(LGFirmwareUpgradeCmd)

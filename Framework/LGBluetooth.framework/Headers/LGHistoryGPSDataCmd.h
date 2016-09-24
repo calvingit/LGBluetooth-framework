@@ -1,10 +1,10 @@
 //
-//  LGHistoryGPSDataCmd.h
-//  LGBluetoothExample
+// LGBluetooth
 //
-//  Created by zhangwen on 16/8/26.
-//  Copyright © 2016年 CLOUDTOO. All rights reserved.
+// Created by : zhangwen
+// Copyright (C) 2016 CLOUDTOO. All rights reserved.
 //
+
 
 #import "LGBaseCommand.h"
 

@@ -30,7 +30,7 @@ typedef NS_ENUM(NSInteger, LGWeatherCode){
  *  @param name 城市名称, 20个字符
  *
  */
-- (void)setCityName:(NSString *)name;
+- (instancetype)setCityName:(NSString *)name;
 
 /**
  *  设置温度
@@ -40,5 +40,5 @@ typedef NS_ENUM(NSInteger, LGWeatherCode){
  *  @param highestTemp 最高气温
  *
  */
-- (void)setWeatherCode:(LGWeatherCode)code lowestTemp:(NSInteger)lowestTemp highestTemp:(NSInteger)highestTemp;
+- (instancetype)setWeatherCode:(LGWeatherCode)code lowestTemp:(NSInteger)lowestTemp highestTemp:(NSInteger)highestTemp;
 @end

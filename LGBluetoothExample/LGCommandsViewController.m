@@ -28,7 +28,7 @@
     // Do any additional setup after loading the view.
     self.title = @"功能命令";
     
-    _commands = @[@"获取SN号", @"获取设备信息", @"设置个人信息", @"获取个人信息", @"设置时间", @"恢复出厂设置", @"获取配对码", @"确认配对码", @"设置久坐提醒", @"获取久坐提醒", @"增加事项提醒", @"删除事项提醒", @"修改事项提醒", @"清空事项提醒", @"读取事项提醒", @"设置通知开关", @"读取通知开关", @"获取当前运动数据", @"获取历史运动数据", @"清空历史运动数据", @"获取睡眠历史数据", @"清空睡眠历史数据", @"获取目标值", @"设置目标值", @"获取心率数据", @"清空心率数据", @"退出拍照界面", @"城市名设置", @"天气设置",@"设置心率采样间隔", @"获取心率采样间隔", @"设置背光时间", @"获取背光时间", @"设置屏幕方向", @"获取屏幕方向", @"设置GPS采样间隔", @"获取GPS采样间隔", @"设置预设睡眠", @"获取预设睡眠", @"进入睡眠", @"退出睡眠", @"设置长度单位",@"读取长度单位", @"设置时间格式",@"读取时间格式", @"清空日历", @"增加日历(系统的)",@"读取日历", @"进入固件升级模式", @"联系人电话本", @"增大音量", @"降低音量", @"同步歌名", @"进入拍照界面", @"获取Heat温度",@"设置Heat温度", @"读取GPS数据", @"清空GPS数据",@"读取温度单位", @"设置温度单位"];
+    _commands = @[@"获取SN号", @"获取设备信息", @"设置个人信息", @"获取个人信息", @"设置时间", @"恢复出厂设置", @"获取配对码", @"确认配对码", @"设置久坐提醒", @"获取久坐提醒", @"增加事项提醒", @"删除事项提醒", @"修改事项提醒", @"清空事项提醒", @"读取事项提醒", @"设置通知开关", @"读取通知开关", @"获取当前运动数据", @"获取历史运动数据", @"清空历史运动数据", @"获取睡眠历史数据", @"清空睡眠历史数据", @"获取目标值", @"设置目标值", @"获取心率数据", @"清空心率数据", @"退出拍照界面", @"城市名设置", @"天气设置",@"设置心率采样间隔", @"获取心率采样间隔", @"设置背光时间", @"获取背光时间", @"设置屏幕方向", @"获取屏幕方向", @"设置GPS采样间隔", @"获取GPS采样间隔", @"设置预设睡眠", @"获取预设睡眠", @"进入睡眠", @"退出睡眠", @"设置长度单位",@"读取长度单位", @"设置时间格式",@"读取时间格式", @"清空日历", @"增加日历(系统的)",@"读取日历", @"进入固件升级模式", @"联系人电话本", @"增大音量", @"降低音量", @"同步歌名", @"进入拍照界面", @"获取Heat温度",@"设置Heat温度", @"读取GPS数据", @"清空GPS数据",@"读取温度单位", @"设置温度单位", @"读取GPS信息"];
     
     self.agent = [[LGPeripheralAgent alloc] initWithPeripheral:self.peripheral];
     self.agent.delegate = self;
@@ -188,7 +188,7 @@
         [[cmd readSNWithSuccess:^(NSString *string) {
             [self showAlert:_commands[row] msg:string];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }] start];
         
     }
@@ -198,7 +198,7 @@
             [self showAlert:_commands[row] msg:[NSString stringWithFormat:@"绑定状态:%@, 电量:%@%%, 版本:%@",
                                                 @(bindingStatus), @(batteryPower), version]];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }] start];
         
     }
@@ -209,7 +209,7 @@
         [[cmd setUserInfo:info success:^{
             [self showAlert:_commands[row] msg: @"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg: error.description];
+            [self showAlert:_commands[row] msg: error.localizedDescription];
         }] start];
         
     }else if (row == 3){
@@ -217,7 +217,7 @@
         [[cmd readUserInfoWithSuccess:^(LGUserInfo *userInfo) {
             [self showAlert:_commands[row] msg: userInfo.description];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg: error.description];
+            [self showAlert:_commands[row] msg: error.localizedDescription];
         }] start];
     }
     else if (row == 4){
@@ -225,7 +225,7 @@
         [cmd startWithSuccess:^{
             [self showAlert:_commands[row] msg: @"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg: error.description];
+            [self showAlert:_commands[row] msg: error.localizedDescription];
         }];
         
     }
@@ -234,7 +234,7 @@
         [cmd startWithSuccess:^{
             [self showAlert:_commands[row] msg: @"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg: error.description];
+            [self showAlert:_commands[row] msg: error.localizedDescription];
         }];
     }
     else if (row == 6){
@@ -242,14 +242,14 @@
         [[cmd readCodeWithSuccess:^(NSString *string) {
             [self showAlert:_commands[row] msg: @"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }] start];
     } else if (row == 7){
         LGComfirmPairingCodeCmd *cmd = [LGComfirmPairingCodeCmd commandWithAgent:self.agent];
         [cmd startWithSuccess:^{
             [self showAlert:_commands[row] msg: @"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg: error.description];
+            [self showAlert:_commands[row] msg: error.localizedDescription];
         }];
     }
     else if (row == 8){
@@ -265,7 +265,7 @@
         [[cmd setReminder:reminder success:^{
             [self showAlert:_commands[row] msg: @"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg: error.description];
+            [self showAlert:_commands[row] msg: error.localizedDescription];
         }] start];
         
     }else if (row == 9){
@@ -273,7 +273,7 @@
         [[cmd readReminderWithSuccess:^(LGSedentaryReminder *reminder) {
             [self showAlert:_commands[row] msg: reminder.description];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg: error.description];
+            [self showAlert:_commands[row] msg: error.localizedDescription];
         }] start];
     }
     else if (row == 10){
@@ -379,7 +379,7 @@
         [cmd startWithSuccess:^{
             [self showAlert:_commands[row] msg: @"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg: error.description];
+            [self showAlert:_commands[row] msg: error.localizedDescription];
         }];
     }
     else if (row == 20){
@@ -388,7 +388,7 @@
         [[cmd readDataWithSuccess:^(NSArray<LGSleepData *> *datas) {
             [self performSegueWithIdentifier:kShowTextSegueID sender:datas.description];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg: error.description];
+            [self showAlert:_commands[row] msg: error.localizedDescription];
         }] start];
         
     } 
@@ -398,7 +398,7 @@
         [cmd startWithSuccess:^{
             [self showAlert:_commands[row] msg: @"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg: error.description];
+            [self showAlert:_commands[row] msg: error.localizedDescription];
         }];
     }
     else if (row == 22){
@@ -406,7 +406,7 @@
         [[cmd readGoalsWithSuccess:^(LGSportGoals *goals){
             [self showAlert:_commands[row] msg:goals.description];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg: error.description];
+            [self showAlert:_commands[row] msg: error.localizedDescription];
         }] start];
         
     } else if (row == 23){
@@ -418,7 +418,7 @@
         [[cmd setGoals:goals success:^{
             [self showAlert:_commands[row] msg: @"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg: error.description];
+            [self showAlert:_commands[row] msg: error.localizedDescription];
         }] start];
     }
     else if (row == 24){
@@ -427,7 +427,7 @@
         [[cmd readDataWithSuccess:^(NSArray<LGHeartRateData *> *datas) {
             [self performSegueWithIdentifier:kShowTextSegueID sender:datas.description];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg: error.description];
+            [self showAlert:_commands[row] msg: error.localizedDescription];
         }] start];
         
     }
@@ -437,7 +437,7 @@
         [cmd startWithSuccess:^{
             [self showAlert:_commands[row] msg: @"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg: error.description];
+            [self showAlert:_commands[row] msg: error.localizedDescription];
         }];
         
     }
@@ -446,7 +446,7 @@
         [cmd startWithSuccess:^{
             [self showAlert:_commands[row] msg: @"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg: error.description];
+            [self showAlert:_commands[row] msg: error.localizedDescription];
         }];
     }
     else if (row == 27){
@@ -455,7 +455,7 @@
         [cmd startWithSuccess:^{
             [self showAlert:_commands[row] msg: @"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg: error.description];
+            [self showAlert:_commands[row] msg: error.localizedDescription];
         }];
     }else if (row == 28){
         LGWeatherSettingCmd *cmd = [LGWeatherSettingCmd commandWithAgent:self.agent];
@@ -463,7 +463,7 @@
         [cmd startWithSuccess:^{
             [self showAlert:_commands[row] msg: @"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg: error.description];
+            [self showAlert:_commands[row] msg: error.localizedDescription];
         }];
     }
     else if (row == 29){
@@ -471,14 +471,14 @@
         [[cmd setInterval:10 success:^{
             [self showAlert:_commands[row] msg:@"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }] start];
     }else if (row == 30){
         LGHeartRateSampleIntervalCmd *cmd = [[LGHeartRateSampleIntervalCmd alloc] initWithPeripheralAgent:self.agent];
         [[cmd readIntervalWithSuccess:^(NSInteger integer) {
             [self showAlert:_commands[row] msg:[NSString stringWithFormat:@"间隔时间:%ld秒",integer]];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }] start];
     }
     else if (row == 31){
@@ -486,7 +486,7 @@
         [[cmd setScreenTime:20 success:^{
             [self showAlert:_commands[row] msg:@"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }] start];
         
     }else if (row == 32){
@@ -494,7 +494,7 @@
         [[cmd readScreenTimeWithSuccess:^(NSInteger integer) {
             [self showAlert:_commands[row] msg:[NSString stringWithFormat:@"亮屏时间是%ld秒", integer]];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }] start];
         
     }
@@ -503,7 +503,7 @@
         [[cmd setOrientation:LGOrientationV success:^{
             [self showAlert:_commands[row] msg:@"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }] start];
         
     }else if (row == 34){
@@ -511,7 +511,7 @@
         [[cmd readOrientationWithSuccess:^(NSInteger integer) {
             [self showAlert:_commands[row] msg:integer ? @"竖屏":@"横屏"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }] start];
     }
     
@@ -520,14 +520,14 @@
         [[cmd setInterval:10 success:^{
             [self showAlert:_commands[row] msg:@"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }] start];
     }else if (row == 36){
         LGGPSSampleIntervalCmd *cmd = [[LGGPSSampleIntervalCmd alloc] initWithPeripheralAgent:self.agent];
         [[cmd readIntervalWithSuccess:^(NSInteger integer) {
             [self showAlert:_commands[row] msg:[NSString stringWithFormat:@"间隔时间:%ld秒",integer]];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }] start];
     }
     else if (row == 37){
@@ -541,7 +541,7 @@
         [[cmd setSleepTime:settings success:^{
             [self showAlert:_commands[row] msg:@"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }] start];
         
     } else if (row == 38){
@@ -549,7 +549,7 @@
         [[cmd readSleepTimeWithSuccess:^(LGSleepSettings *sleepTime) {
             [self showAlert:_commands[row] msg:sleepTime.description];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }] start];
         
     }
@@ -559,7 +559,7 @@
         [cmd startWithSuccess:^{
             [self showAlert:_commands[row] msg:@"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }];
     }else if (row == 40){
         LGSleepActionCmd *cmd = [[LGSleepActionCmd alloc] initWithPeripheralAgent:self.agent];
@@ -567,7 +567,7 @@
         [cmd startWithSuccess:^{
             [self showAlert:_commands[row] msg:@"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }];
     }
     
@@ -576,14 +576,14 @@
         [[cmd setUnit:LGDistanceUnitMI success:^{
             [self showAlert:_commands[row] msg: @"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }] start];
     } else if (row == 42){
         LGDistanceUnitCmd *cmd = [LGDistanceUnitCmd commandWithAgent:self.agent];
         [[cmd readUnitWithSuccess:^(NSInteger integer) {
             [self showAlert:_commands[row] msg: integer ? @"单位是英里":@"单位是千米"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }] start];
     }
     
@@ -592,14 +592,14 @@
         [[cmd setTimeFormat:LGTimeFormat12 success:^{
             [self showAlert:_commands[row] msg: @"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }] start];
     }else if (row == 44){
         LGTimeFormatCmd *cmd = [LGTimeFormatCmd commandWithAgent:self.agent];
         [[cmd readTimeFormatWithSuccess:^(NSInteger integer) {
             [self showAlert:_commands[row] msg: integer ? @"12小时制":@"24小时制"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }] start];
     }
     
@@ -607,7 +607,7 @@
         [[[LGCalendarEventCmd commandWithAgent:self.agent]  cleanUpCalendarsWithSuccess:^{
             [self showAlert:_commands[row] msg: @"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }] start];
     }else if (row == 46){
         LGCommandsQueue *chainCommands = [[LGCommandsQueue alloc] init];
@@ -633,7 +633,7 @@
                 }
                 
                 [chainCommands startWithCompletion:^(NSError *error){
-                    [self showAlert:_commands[row] msg:error ? error.description: @"成功"];
+                    [self showAlert:_commands[row] msg:error ? error.localizedDescription: @"成功"];
                 }];
             }
         }];
@@ -642,7 +642,7 @@
             [SVProgressHUD dismiss];
             [self performSegueWithIdentifier:kShowTextSegueID sender:array.description];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }];
         [cmd start];
     }
@@ -652,7 +652,7 @@
         [cmd startWithSuccess:^{
             [self showAlert:_commands[row] msg:@"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }];
     }
     
@@ -667,7 +667,7 @@
         [cmd startWithSuccess:^{
             [self showAlert:_commands[row] msg:@"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }];
         
     } else if (row == 51){
@@ -676,7 +676,7 @@
         [cmd startWithSuccess:^{
             [self showAlert:_commands[row] msg:@"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }];
     }
     else if (row == 52){
@@ -685,7 +685,7 @@
         [cmd startWithSuccess:^{
             [self showAlert:_commands[row] msg:@"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }];
     }
     else if (row == 53){
@@ -693,7 +693,7 @@
         [cmd startWithSuccess:^{
             [self showAlert:_commands[row] msg:@"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }];
     }
     else if (row == 54){
@@ -701,7 +701,7 @@
         [cmd readAllHeatLevelsWithSuccess:^(NSDictionary *dict) {
             [self showAlert:_commands[row] msg:dict.description];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }];
         [cmd start];
     }
@@ -710,7 +710,7 @@
         [cmd setLevel:LGHeatLevelTwo bodyPart:LGBodyPartShoulder success:^{
             [self showAlert:_commands[row] msg:@"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }];
         [cmd start];
     }
@@ -719,7 +719,7 @@
         [[cmd readDataWithSuccess:^(NSArray<LGGPSData *> *datas) {
             [self performSegueWithIdentifier:kShowTextSegueID sender:datas.description];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }] start];
     }
     else if (row == 57){
@@ -727,7 +727,7 @@
         [cmd startWithSuccess:^{
             [self showAlert:_commands[row] msg:@"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }];
     }
     else if (row == 58) {
@@ -735,7 +735,7 @@
         [[cmd readUnitWithSuccess:^(NSInteger integer) {
             [self showAlert:_commands[row] msg:integer ? @"华氏度" : @"摄氏度"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }] start];
     }
     else if (row == 59) {
@@ -743,9 +743,19 @@
         [[cmd setUnit:LGTempUnitFahrenheit success:^{
             [self showAlert:_commands[row] msg:@"成功"];
         } failure:^(NSError *error) {
-            [self showAlert:_commands[row] msg:error.description];
+            [self showAlert:_commands[row] msg:error.localizedDescription];
         }] start];
         
+    }
+    else if (row == 60){
+        LGGPSInfoCmd *cmd = [LGGPSInfoCmd commandWithAgent:self.agent];
+        [cmd readInfoWithSuccess:^(NSData *data) {
+            NSLog(@"GPS Info:%@", data);
+            [SVProgressHUD dismiss];
+        } failure:^(NSError *error) {
+            [self showAlert:_commands[row] msg:error.localizedDescription];
+        }];
+        [cmd start];
     }
     else {
         [SVProgressHUD dismiss];
