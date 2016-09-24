@@ -5,12 +5,17 @@
 LGBluetooth是iOS的动态框架，使用Objective-C语言开发，封装了[深圳云图科技公司](http://cloudtootech.com)智能穿戴产品的蓝牙协议。
 ## 系统要求
 - iOS 8.0 + 
-- Xcode 7.3 +
+- Xcode 8 +
+
+**如果需要DFU，则需要设置`SWIFT_VERSION`为2.3** 
+
 
 ## 安装
-- 前往Xcode 工程的`General`设置项中，将`LGBluetooth.framework`和`DFULibrary.framework`拖曳到`Embedded Binaries`选项中。确认Copy items if needed被选中后，点击Finish按钮；
+- 前往Xcode 工程的`General`设置项中，将`LGBluetooth.framework`拖曳到`Embedded Binaries`选项中。确认Copy items if needed被选中后，点击Finish按钮；
 - import framework
 - 如果需要后台使用蓝牙，请将Project——Target——Capabilities——Backgroud Modes打开，勾选里面的**Uses Bluetooth LE accessories**。
+
+**如果需要DFU，则需要将`DFULibrary.framework`加入工程**
 
 ## 使用说明
 
