@@ -9,7 +9,7 @@
 #import "LGFirmwareViewController.h"
 #import "LGDFUManager.h"
 @import LGBluetooth;
-@import DFULibrary;
+@import iOSDFULibrary;
 @import SVProgressHUD;
 
 @interface LGFirmwareViewController ()<LGDFUManagerDelegate>
@@ -32,8 +32,7 @@
     UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(updateFiles)];
     self.navigationItem.rightBarButtonItem = button;
     
-    self.files = [self getZipFilesFromDocumentDirectory];
-    self.selectedIndex = -1;
+    [self updateFiles];
     
     LGPeripheralAgent *agent = [[LGPeripheralAgent alloc] initWithPeripheral:self.peripheral];
     self.dfuManager = [[LGDFUManager alloc] initWithPeripheralAgent:agent];
@@ -41,6 +40,7 @@
 
 - (void)updateFiles{
     self.files = [self getZipFilesFromDocumentDirectory];
+    self.selectedIndex = -1;
     [self.tableView reloadData];
 }
 
@@ -132,7 +132,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FileCellID"];
     cell.textLabel.text = self.files[indexPath.row];
-    
+    cell.accessoryType = UITableViewCellAccessoryNone;
+
     return cell;
 }
 

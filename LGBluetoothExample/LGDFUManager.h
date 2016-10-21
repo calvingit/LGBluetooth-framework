@@ -7,7 +7,7 @@
 
 @import Foundation;
 @import LGBluetooth;
-@import DFULibrary;
+@import iOSDFULibrary;
 //https://github.com/NordicSemiconductor/IOS-DFU-Library.git
 //支持carthage 和 cocoapods
 

@@ -58,3 +58,4 @@ FOUNDATION_EXPORT NSString * const kLGBluetoothVersion;
 #import "LGTempUnitCmd.h"
 #import "NSError+Peripheral.h"
 #import "LGGPSInfoCmd.h"
+#import "LGMapDataManager.h"

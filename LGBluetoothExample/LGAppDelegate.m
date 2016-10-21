@@ -13,6 +13,9 @@
 {
     // Override point for customization after application launch.
     // Initialization of CentralManager
+    //禁用自动休眠
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
+
     [LGCentralManager startUp];
     return YES;
 }

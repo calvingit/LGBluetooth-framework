@@ -29,13 +29,8 @@
 - (instancetype)initWithPeripheralAgent:(LGPeripheralAgent *)agent{
     if (self = [super init]) {
         _peripheralAgent = agent;
-        [UIApplication sharedApplication].idleTimerDisabled = YES;
     }
     return self;
-}
-
-- (void)dealloc{
-    [UIApplication sharedApplication].idleTimerDisabled = NO;
 }
 
 //恢复delegate，否则被DFU接管了，以后连接不上。
@@ -98,7 +93,9 @@
     [self resetDelegate];
     [[LGCentralManager sharedInstance] scanPeripheralsWithServices:@[kDFUServiceUUID] interval:5 completion:^(LGCentralManager *manager, NSArray *scanedPeripherals) {
         for (LGPeripheral *peripheral in scanedPeripherals) {
-            if ([peripheral.name hasPrefix:@"OTA"]) {
+            //OTA设备的名称有可能是"OTA_"开头，或者"_OTA"结尾
+            if ([peripheral.name rangeOfString:@"OTA_"].length > 0 ||
+                [peripheral.name rangeOfString:@"_OTA"].length > 0) {
                 self.upgradePeripheral = peripheral;
                 [self performDFUWithPeripheral:peripheral.cbPeripheral];
                 return;
@@ -129,33 +126,39 @@
     NSLog(@"DFU Log:%ld %@", (long) level, message);
 }
 
--(void)didStateChangedTo:(enum State)state
+-(void)didStateChangedTo:(DFUState)state
 {
     switch (state) {
-        case StateConnecting:
+        case DFUStateConnecting:
             break;
-        case StateStarting:
+        case DFUStateStarting:
             break;
-        case StateEnablingDfuMode:
+        case DFUStateEnablingDfuMode:
             break;
-        case StateUploading:
+        case DFUStateUploading:
             break;
-        case StateValidating:
+        case DFUStateValidating:
             break;
-        case StateDisconnecting:
+        case DFUStateDisconnecting:
             break;
-        case StateCompleted:{
+        case DFUStateCompleted:{
             [self resetDelegate];
             if ([self.delegate respondsToSelector:@selector(DFUManagerCompleted:)]) {
                 [self.delegate DFUManagerCompleted:self];
             }
         }
             break;
-        case StateAborted:{
+        case DFUStateAborted:{
             if ([self.delegate respondsToSelector:@selector(DFUManager:didErrorOccurWithMessage:)]) {
                 [self.delegate DFUManager:self didErrorOccurWithMessage:@"DFU aborted!"];
             }
         }
+            break;
+        case DFUStateSignatureMismatch:
+            break;
+        case DFUStateOperationNotPermitted:
+            break;
+        case DFUStateFailed:
             break;
     }
 }

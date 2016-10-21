@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		475801866246827330EE8D6D /* Pods_LGBluetoothExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6531193985CA473AC73B9267 /* Pods_LGBluetoothExample.framework */; };
+		5A5CE1271DB9AFD100824CD3 /* LGMapUpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5CE1261DB9AFD100824CD3 /* LGMapUpdateViewController.m */; };
 		5A730F431D8672B2004FC693 /* LGDFUManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A730F421D8672B2004FC693 /* LGDFUManager.m */; };
 		5A8CF7B51D05900400C0C8A4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A8CF7B41D05900400C0C8A4 /* Launch Screen.storyboard */; };
 		5AC0642A1CC7595900301C32 /* LGCommandsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC064291CC7595900301C32 /* LGCommandsViewController.m */; };
-		5AD0F64F1D86AEA300460A9A /* DFULibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD0F64D1D86AEA300460A9A /* DFULibrary.framework */; };
-		5AD0F6501D86AEA300460A9A /* DFULibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD0F64D1D86AEA300460A9A /* DFULibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5AD0F6511D86AEA300460A9A /* LGBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD0F64E1D86AEA300460A9A /* LGBluetooth.framework */; };
 		5AD0F6521D86AEA300460A9A /* LGBluetooth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD0F64E1D86AEA300460A9A /* LGBluetooth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5AD8E6A81D2B97190056D73F /* LGContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD8E6A71D2B97190056D73F /* LGContactsViewController.m */; };
@@ -39,7 +38,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				5AD0F6521D86AEA300460A9A /* LGBluetooth.framework in Embed Frameworks */,
-				5AD0F6501D86AEA300460A9A /* DFULibrary.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,13 +47,14 @@
 /* Begin PBXFileReference section */
 		2FA73B6C20C1E0C4A78681EA /* libPods-LGBluetoothExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LGBluetoothExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD757D66092F4872AB65AD4 /* Pods-LGBluetoothExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LGBluetoothExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-LGBluetoothExample/Pods-LGBluetoothExample.release.xcconfig"; sourceTree = "<group>"; };
+		5A5CE1251DB9AFD100824CD3 /* LGMapUpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGMapUpdateViewController.h; sourceTree = "<group>"; };
+		5A5CE1261DB9AFD100824CD3 /* LGMapUpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGMapUpdateViewController.m; sourceTree = "<group>"; };
 		5A730E261D864D09004FC693 /* iOSDFULibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iOSDFULibrary.framework; path = "../../../../Library/Developer/Xcode/DerivedData/LGBluetoothExample-faskzyvcfhhwsvcsazccaotmwfmi/Build/Products/Release-iphoneos/iOSDFULibrary/iOSDFULibrary.framework"; sourceTree = "<group>"; };
 		5A730F411D8672B2004FC693 /* LGDFUManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGDFUManager.h; sourceTree = "<group>"; };
 		5A730F421D8672B2004FC693 /* LGDFUManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGDFUManager.m; sourceTree = "<group>"; };
 		5A8CF7B41D05900400C0C8A4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		5AC064281CC7595900301C32 /* LGCommandsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGCommandsViewController.h; sourceTree = "<group>"; };
 		5AC064291CC7595900301C32 /* LGCommandsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGCommandsViewController.m; sourceTree = "<group>"; };
-		5AD0F64D1D86AEA300460A9A /* DFULibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFULibrary.framework; path = Framework/DFULibrary.framework; sourceTree = "<group>"; };
 		5AD0F64E1D86AEA300460A9A /* LGBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LGBluetooth.framework; path = Framework/LGBluetooth.framework; sourceTree = "<group>"; };
 		5AD8E6A61D2B97190056D73F /* LGContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGContactsViewController.h; sourceTree = "<group>"; };
 		5AD8E6A71D2B97190056D73F /* LGContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGContactsViewController.m; sourceTree = "<group>"; };
@@ -97,7 +96,6 @@
 				5AD0F6511D86AEA300460A9A /* LGBluetooth.framework in Frameworks */,
 				8E986BB018A505B500BB66DA /* Foundation.framework in Frameworks */,
 				475801866246827330EE8D6D /* Pods_LGBluetoothExample.framework in Frameworks */,
-				5AD0F64F1D86AEA300460A9A /* DFULibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +105,6 @@
 		8E986BA318A505B500BB66DA = {
 			isa = PBXGroup;
 			children = (
-				5AD0F64D1D86AEA300460A9A /* DFULibrary.framework */,
 				5AD0F64E1D86AEA300460A9A /* LGBluetooth.framework */,
 				8E986BB518A505B500BB66DA /* LGBluetoothExample */,
 				8E986BAE18A505B500BB66DA /* Frameworks */,
@@ -161,6 +158,8 @@
 				5AD8E6A71D2B97190056D73F /* LGContactsViewController.m */,
 				5ADBF90F1D7684D500A49810 /* LGTextViewController.h */,
 				5ADBF9101D7684D500A49810 /* LGTextViewController.m */,
+				5A5CE1251DB9AFD100824CD3 /* LGMapUpdateViewController.h */,
+				5A5CE1261DB9AFD100824CD3 /* LGMapUpdateViewController.m */,
 				8E986BC718A505B500BB66DA /* Images.xcassets */,
 				8E986BB618A505B500BB66DA /* Supporting Files */,
 			);
@@ -308,7 +307,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -328,6 +327,7 @@
 				5AE1C8451D3F5B7700F36336 /* LGWriteSerialNumberController.m in Sources */,
 				5AE1C84B1D3F5BBE00F36336 /* LGFirmwareViewController.m in Sources */,
 				8E986BC618A505B500BB66DA /* LGViewController.m in Sources */,
+				5A5CE1271DB9AFD100824CD3 /* LGMapUpdateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

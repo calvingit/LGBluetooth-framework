@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _titles = @[@"功能测试", @"固件升级", @"写序列号"];
+    _titles = @[@"功能测试", @"固件升级", @"地图升级", @"写序列号"];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

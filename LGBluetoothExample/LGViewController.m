@@ -9,6 +9,7 @@
 #import "LGCommandsViewController.h"
 #import "LGFirmwareViewController.h"
 #import "LGWriteSerialNumberController.h"
+#import "LGMapUpdateViewController.h"
 @import JDStatusBarNotification;
 @import LGBluetooth;
 @import SVProgressHUD;
@@ -65,7 +66,7 @@
     NSArray *connectedPeripherals = [[LGCentralManager sharedInstance] retrieveConnectedPeripheralsWithServices:@[kDefaultServiceUUID]];
     [self.allPeripherals addObjectsFromArray:connectedPeripherals];
     //开启扫描
-    [[LGCentralManager sharedInstance] scanPeripheralsWithServices:@[kDefaultServiceUUID] interval:3 completion:^(LGCentralManager *manager, NSArray *scanedPeripherals) {
+    [[LGCentralManager sharedInstance] scanPeripheralsWithServices:nil interval:3 completion:^(LGCentralManager *manager, NSArray *scanedPeripherals) {
         [self.allPeripherals addObjectsFromArray:scanedPeripherals];
         [self filterPeripheralsWithText:nil];
         [SVProgressHUD dismiss];
@@ -144,6 +145,8 @@
                 }else if (self.functionType == 1){
                     [self performSegueWithIdentifier:@"FirmwareUpgradeSegue" sender:peripheral];
                 } else if (self.functionType == 2){
+                    [self performSegueWithIdentifier:@"MapUpdateSegue" sender:peripheral];
+                } else if (self.functionType == 3){
                     [self performSegueWithIdentifier:@"SerialNumberSegue" sender:peripheral];
                 }
             }
@@ -160,6 +163,9 @@
         vc.peripheral = sender;
     } else if([segue.identifier isEqualToString:@"SerialNumberSegue"]){
         LGWriteSerialNumberController *vc = segue.destinationViewController;
+        vc.peripheral = sender;
+    } else if([segue.identifier isEqualToString:@"MapUpdateSegue"]){
+        LGMapUpdateViewController *vc = segue.destinationViewController;
         vc.peripheral = sender;
     }
 }
