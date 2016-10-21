@@ -1,12 +1,17 @@
 # 软件更新(LGDFUManager)
-智能手环、手表也有一个操作系统在里面，也需要升级更新系统。
 
-在example里面，已经有一个例子，其中的核心就是`LGDFUManager`类。
+## 说明
 
-`LGDFUManager`依赖[DFULibrary](https://github.com/NordicSemiconductor/IOS-DFU-Library)，这个库使用swift 2.2写的，支持carthage和pod。如果你的项目是用Objective-C写的，请将`Embedded Content Contains Swift Code`选择为`YES`。
+需要导入 [iOS DFU Library](https://github.com/NordicSemiconductor/IOS-Pods-DFU-Library) ，Swift 3 编写，支持pod：
 
-![](images/contain-swift.png)
+```
+target 'YourAppTargetName' do
+    use_frameworks!
+    pod 'iOSDFULibrary'
+end
+```
 
+在LGBluetoothExample里面，已经有一个例子，其中的核心就是`LGDFUManager`类。
 
 ## 升级流程
 1. 首先进入升级模式，使用命令`LGFirmwareUpgradeCmd`
