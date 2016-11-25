@@ -1,4 +1,4 @@
-# 软件更新(LGDFUManager)
+# 固件升级(LGDFUManager)
 
 ## 说明
 
