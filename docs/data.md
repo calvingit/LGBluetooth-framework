@@ -7,8 +7,9 @@
 
 ### 读取当天运动数据(LGCurrentSportDataCmd)
 
-当天运动数据是汇总值，表示今天跑的总步数和消耗的卡路里，卡路里单位是小卡。
+当天运动数据是汇总值，表示今天跑的总步数和消耗的卡路里，卡路里单位是小卡。这两个值是实时数据，不需要存储的。
 代码如下：
+
 ```
 LGCurrentSportDataCmd *cmd = [LGCurrentSportDataCmd commandWithAgent:self.agent];
 [[cmd readCurrentSportDataWithSuccess:^(NSInteger steps, NSInteger calories) {
@@ -20,7 +21,7 @@ LGCurrentSportDataCmd *cmd = [LGCurrentSportDataCmd commandWithAgent:self.agent]
 ```
 
 ### 读取历史运动数据(LGHistorySportDataCmd)
-历史运动数据用`LGSportData`表示有三个属性:
+历史运动数据指保存在手环flash的缓存数据，用`LGSportData`表示有三个属性:
 - date  时间
 - steps  步数
 - calories 卡路里

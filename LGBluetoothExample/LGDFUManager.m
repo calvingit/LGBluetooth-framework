@@ -110,7 +110,7 @@
     DFUServiceInitiator *initiator =
     [[DFUServiceInitiator alloc] initWithCentralManager:[LGCentralManager sharedInstance].manager
                                                  target:peripheral];
-    [initiator withFirmwareFile:self.firmware];
+    [initiator withFirmware:self.firmware];
     initiator.forceDfu = NO;
     initiator.packetReceiptNotificationParameter = 12;
     initiator.logger = self;
@@ -126,8 +126,7 @@
     NSLog(@"DFU Log:%ld %@", (long) level, message);
 }
 
--(void)didStateChangedTo:(DFUState)state
-{
+- (void)dfuStateDidChangeTo:(enum DFUState)state{
     switch (state) {
         case DFUStateConnecting:
             break;
@@ -154,21 +153,14 @@
             }
         }
             break;
-        case DFUStateSignatureMismatch:
-            break;
-        case DFUStateOperationNotPermitted:
-            break;
-        case DFUStateFailed:
-            break;
     }
 }
 
--(void)onUploadProgress:(NSInteger)part totalParts:(NSInteger)totalParts progress:(NSInteger)percentage
-currentSpeedBytesPerSecond:(double)speed avgSpeedBytesPerSecond:(double)avgSpeed{
-    self.progress = percentage;
+- (void)dfuProgressDidChangeFor:(NSInteger)part outOf:(NSInteger)totalParts to:(NSInteger)progress currentSpeedBytesPerSecond:(double)currentSpeedBytesPerSecond avgSpeedBytesPerSecond:(double)avgSpeedBytesPerSecond{
+    self.progress = progress;
 }
 
--(void)didErrorOccur:(enum DFUError)error withMessage:(NSString *)message{
+- (void)dfuError:(enum DFUError)error didOccurWithMessage:(NSString *)message{
     NSLog(@"DFU error: %@", message);
     //延迟两秒后再次执行，这里不需要搜索设备了，已经保存在self.upgradePeripheral
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
