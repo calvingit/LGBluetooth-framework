@@ -8,9 +8,7 @@
 #import "LGBaseCommand.h"
 @class LGSportData;
 /**
- *  心率回调
- *
- *  @param hrValue 心率值
+ *  运动回调
  */
 typedef void(^LGSportDataBlock)(NSArray<LGSportData *> *datas);
 

@@ -58,6 +58,13 @@
     _firmware = [[DFUFirmware alloc] initWithUrlToZipFile:fileURL];
     [self resetDelegate];
     
+    //如果已经进入了升级模式，直接进行升级
+    if ([_peripheralAgent.peripheral.name rangeOfString:@"OTA_"].length > 0) {
+        self.upgradePeripheral = _peripheralAgent.peripheral;
+        [self performDFUWithPeripheral:self.upgradePeripheral.cbPeripheral];
+        return;
+    }
+    
     if (!self.peripheralAgent.peripheral.connected) {
         if ([self.delegate respondsToSelector:@selector(DFUManager:didErrorOccurWithMessage:)]) {
             [self.delegate DFUManager:self didErrorOccurWithMessage:@"Peripheral not connected"];
@@ -70,7 +77,9 @@
         if ([self.delegate respondsToSelector:@selector(DFUManagerEnterUpgradeMode:)]) {
             [self.delegate DFUManagerEnterUpgradeMode:self];
         }
-        [self scanDFUDevice];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self scanDFUDevice];
+        });
     } failure:^(NSError *error) {
         if ([self.delegate respondsToSelector:@selector(DFUManager:didErrorOccurWithMessage:)]) {
             [self.delegate DFUManager:self didErrorOccurWithMessage:@"Peripheral enter upgrade mode failed!"];
@@ -93,9 +102,8 @@
     [self resetDelegate];
     [[LGCentralManager sharedInstance] scanPeripheralsWithServices:@[kDFUServiceUUID] interval:5 completion:^(LGCentralManager *manager, NSArray *scanedPeripherals) {
         for (LGPeripheral *peripheral in scanedPeripherals) {
-            //OTA设备的名称有可能是"OTA_"开头，或者"_OTA"结尾
-            if ([peripheral.name rangeOfString:@"OTA_"].length > 0 ||
-                [peripheral.name rangeOfString:@"_OTA"].length > 0) {
+            //OTA设备的名称有可能是"OTA_"开头
+            if ([peripheral.name rangeOfString:@"OTA_"].length > 0) {
                 self.upgradePeripheral = peripheral;
                 [self performDFUWithPeripheral:peripheral.cbPeripheral];
                 return;
@@ -126,7 +134,8 @@
     NSLog(@"DFU Log:%ld %@", (long) level, message);
 }
 
-- (void)dfuStateDidChangeTo:(enum DFUState)state{
+- (void)dfuStateDidChangeTo:(enum DFUState)state
+{
     switch (state) {
         case DFUStateConnecting:
             break;
@@ -156,16 +165,26 @@
     }
 }
 
-- (void)dfuProgressDidChangeFor:(NSInteger)part outOf:(NSInteger)totalParts to:(NSInteger)progress currentSpeedBytesPerSecond:(double)currentSpeedBytesPerSecond avgSpeedBytesPerSecond:(double)avgSpeedBytesPerSecond{
+-(void)dfuProgressDidChangeFor:(NSInteger)part outOf:(NSInteger)totalParts to:(NSInteger)progress currentSpeedBytesPerSecond:(double)currentSpeedBytesPerSecond avgSpeedBytesPerSecond:(double)avgSpeedBytesPerSecond
+{
     self.progress = progress;
 }
 
-- (void)dfuError:(enum DFUError)error didOccurWithMessage:(NSString *)message{
+- (void)dfuError:(enum DFUError)error didOccurWithMessage:(NSString *)message
+{
     NSLog(@"DFU error: %@", message);
-    //延迟两秒后再次执行，这里不需要搜索设备了，已经保存在self.upgradePeripheral
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self performDFUWithPeripheral:self.upgradePeripheral.cbPeripheral];
-    });
+    self.retryCount++;
+    if (self.retryCount < kMaxRetryCount) {
+        //延迟两秒后再次执行，这里不需要搜索设备了，已经保存在self.upgradePeripheral
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self performDFUWithPeripheral:self.upgradePeripheral.cbPeripheral];
+        });
+    }else {
+        if ([self.delegate respondsToSelector:@selector(DFUManager:didErrorOccurWithMessage:)]) {
+            [self.delegate DFUManager:self didErrorOccurWithMessage:message];
+        }
+    }
+
 }
 
 

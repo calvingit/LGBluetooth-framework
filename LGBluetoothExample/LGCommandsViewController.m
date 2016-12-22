@@ -2,7 +2,7 @@
 // LGBluetooth
 //
 // Created by : zhangwen
-// Copyright (C) zhangwen. All rights reserved.
+// Copyright (C) 2016 zhangwen. All rights reserved.
 //
 
 #import "LGCommandsViewController.h"
@@ -28,7 +28,7 @@
     // Do any additional setup after loading the view.
     self.title = @"功能命令";
     
-    _commands = @[@"获取SN号", @"获取设备信息", @"设置个人信息", @"获取个人信息", @"设置时间", @"恢复出厂设置", @"获取配对码", @"确认配对码", @"设置久坐提醒", @"获取久坐提醒", @"增加事项提醒", @"删除事项提醒", @"修改事项提醒", @"清空事项提醒", @"读取事项提醒", @"设置通知开关", @"读取通知开关", @"获取当前运动数据", @"获取历史运动数据", @"清空历史运动数据", @"获取睡眠历史数据", @"清空睡眠历史数据", @"获取目标值", @"设置目标值", @"获取心率数据", @"清空心率数据", @"退出拍照界面", @"城市名设置", @"天气设置",@"设置心率采样间隔", @"获取心率采样间隔", @"设置背光时间", @"获取背光时间", @"设置屏幕方向", @"获取屏幕方向", @"设置GPS采样间隔", @"获取GPS采样间隔", @"设置预设睡眠", @"获取预设睡眠", @"进入睡眠", @"退出睡眠", @"设置长度单位",@"读取长度单位", @"设置时间格式",@"读取时间格式", @"清空日历", @"增加日历(系统的)",@"读取日历", @"进入固件升级模式", @"联系人电话本", @"增大音量", @"降低音量", @"同步歌名", @"进入拍照界面", @"获取Heat温度",@"设置Heat温度", @"读取GPS数据", @"清空GPS数据",@"读取温度单位", @"设置温度单位", @"读取GPS信息"];
+    _commands = @[@"获取SN号", @"获取设备信息", @"设置个人信息", @"获取个人信息", @"设置时间", @"恢复出厂设置", @"获取配对码", @"确认配对码", @"设置久坐提醒", @"获取久坐提醒", @"增加事项提醒", @"删除事项提醒", @"修改事项提醒", @"清空事项提醒", @"读取事项提醒", @"设置通知开关", @"读取通知开关", @"获取当前运动数据", @"获取历史运动数据", @"清空历史运动数据", @"获取睡眠历史数据", @"清空睡眠历史数据", @"获取目标值", @"设置目标值", @"获取体征数据", @"清空体征数据", @"退出拍照界面", @"城市名设置", @"天气设置",@"设置心率采样间隔", @"获取心率采样间隔", @"设置背光时间", @"获取背光时间", @"设置屏幕方向", @"获取屏幕方向", @"设置GPS采样间隔", @"获取GPS采样间隔", @"设置预设睡眠", @"获取预设睡眠", @"进入睡眠", @"退出睡眠", @"设置长度单位",@"读取长度单位", @"设置时间格式",@"读取时间格式", @"清空日历", @"增加日历(系统的)",@"读取日历", @"进入固件升级模式", @"联系人电话本", @"增大音量", @"降低音量", @"同步歌名", @"进入拍照界面", @"获取Heat温度",@"设置Heat温度", @"读取GPS数据", @"清空GPS数据",@"读取温度单位", @"设置温度单位", @"读取GPS信息", @"读取高尔夫数据", @"清空高尔夫数据"];
     
     self.agent = [[LGPeripheralAgent alloc] initWithPeripheral:self.peripheral];
     self.agent.delegate = self;
@@ -423,8 +423,8 @@
     }
     else if (row == 24){
         
-        LGHistoryHeartRateDataCmd *cmd = [[LGHistoryHeartRateDataCmd alloc] initWithPeripheralAgent:self.agent];
-        [[cmd readDataWithSuccess:^(NSArray<LGHeartRateData *> *datas) {
+        LGHistoryBodyDataCmd *cmd = [[LGHistoryBodyDataCmd alloc] initWithPeripheralAgent:self.agent];
+        [[cmd readDataWithSuccess:^(NSArray<LGBodyData *> *datas) {
             [self performSegueWithIdentifier:kShowTextSegueID sender:datas.description];
         } failure:^(NSError *error) {
             [self showAlert:_commands[row] msg: error.localizedDescription];
@@ -752,6 +752,26 @@
         [cmd readInfoWithSuccess:^(NSData *data) {
             NSLog(@"GPS Info:%@", data);
             [SVProgressHUD dismiss];
+        } failure:^(NSError *error) {
+            [self showAlert:_commands[row] msg:error.localizedDescription];
+        }];
+        [cmd start];
+    }
+    
+    else if (row == 61) {
+        LGGolfScoresCmd *cmd = [LGGolfScoresCmd commandWithAgent:self.agent];
+        [cmd readScoresWithSuccess:^(NSArray<LGGolfScore *> *scores) {
+            NSLog(@"Golf Scores:%@", scores);
+            [SVProgressHUD dismiss];
+        } failure:^(NSError *error) {
+            [self showAlert:_commands[row] msg:error.localizedDescription];
+        }];
+        [cmd start];
+    }
+    else if (row == 62) {
+        LGCleanUpGolfDataCmd *cmd = [LGCleanUpGolfDataCmd commandWithAgent:self.agent];
+        [cmd startWithSuccess:^{
+            [self showAlert:_commands[row] msg:@"成功"];
         } failure:^(NSError *error) {
             [self showAlert:_commands[row] msg:error.localizedDescription];
         }];

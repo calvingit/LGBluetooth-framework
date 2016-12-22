@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>JDStatusBarNotification.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-LGBluetoothExample.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Zip.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>iOSDFULibrary.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>0D83E505BF1E81A4AAA9A3A5CAA45E9E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>570B1EFB2D11F5B06166FDA2A614F81C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6DE24706FE9CF4E6C5DB4508F180A481</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8DE7FC4CDDD200F23AD628CCFECFE1A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BE77DCBA10C4CF61745F1D79977081B7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

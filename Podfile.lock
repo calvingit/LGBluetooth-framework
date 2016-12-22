@@ -1,0 +1,21 @@
+PODS:
+  - iOSDFULibrary (3.0.0):
+    - Zip (~> 0.6)
+  - JDStatusBarNotification (1.5.5)
+  - SVProgressHUD (2.1.2)
+  - Zip (0.6.0)
+
+DEPENDENCIES:
+  - iOSDFULibrary
+  - JDStatusBarNotification
+  - SVProgressHUD
+
+SPEC CHECKSUMS:
+  iOSDFULibrary: 201dec70ae2d7e1cfbdc3cd8005b163f009c9dea
+  JDStatusBarNotification: 2b4f29bd68a60d7aa2f190b5265f1ce59c18aaf8
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  Zip: 805fc2fa9d2f05bbb7762d982d7a42ccdcc51f42
+
+PODFILE CHECKSUM: c19ed874777b046bfdc864aa99d0a890c6deda73
+
+COCOAPODS: 1.1.1

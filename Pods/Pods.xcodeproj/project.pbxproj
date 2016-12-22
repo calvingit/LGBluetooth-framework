@@ -1,0 +1,1348 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 47;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02AF8B96E19007790F4E1DBB31DC1B85 /* LegacyDFUService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89EE7B10180B2FBFC30B0D698916A8D /* LegacyDFUService.swift */; };
+		077316421ED6B26EAB78A12926A6A9F0 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 078ECBE46680AB3D0D632F2B48AC7ABB /* SVIndefiniteAnimatedView.m */; };
+		0A8CC78B7D5522AFDB7660C919492110 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F359956D0E5CF4BD4E197D5DCEB59BA /* ioapi.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0ACDCC115944550CAFB9EE77B093D10B /* SVProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FF1D8C0B7297AAB01E51253AE9CA9A5E /* SVProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B4523995B7ABC300D963EDA19884C96 /* SecureDFUControlPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBADBADA9B9F0992C44BD4D11A5E411 /* SecureDFUControlPoint.swift */; };
+		0D092872D68602BA5B095212E066EDFF /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = B78F3779B2D09037FD2B561EF92C80B8 /* SVProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11F18AA1A6A0D031B5405D349A3DAB31 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA7B03C899946A23FC4429E640CD224 /* SVProgressAnimatedView.m */; };
+		1521A78DC3CCD6049E180AC99DC6DD83 /* LoggerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93C74D58671EA86FD820B27635AF607 /* LoggerDelegate.swift */; };
+		15AB02AEE6262A2ABF77063288E0EAB2 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434EA313D1345FA330FB04885C003303 /* Double.swift */; };
+		17F35E34D9AB22D81FBA77B6DCF1C3BB /* JDStatusBarStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 01DDC3173ED2CB35C8D3BD8D12A9272A /* JDStatusBarStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BB77E9BE15CF5EEC753C261A06F385B /* DFUPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB97695DD8393254891518B98A3C619 /* DFUPacket.swift */; };
+		1C046AFC38A756DB8DD364A801E65962 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D63CC452FED17CB5471DFE5781A4C4 /* QuartzCore.framework */; };
+		1C845F8441007558AE7386064FE833AD /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 2935165B602360895CA9889AAB8EC064 /* zip.c */; };
+		1CCA821DFE6F8EC02D76AB85C5B92431 /* SecureDFUPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B19B2292C1879E4A45887C5142485F /* SecureDFUPacket.swift */; };
+		1F25975D6B128FBE8075F26975B829BE /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 15730D0789FE3D146CA6F38B1D1F0031 /* SVRadialGradientLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		220CD3B3E502DD0AF25C391B68358CDD /* SVProgressAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 65F3E90F67B99EDFB7233A4486AD65D3 /* SVProgressAnimatedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		257D501B3FB2B3C88BC1A5A69BA83CD7 /* ExperimentalButtonlessDFU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405F2FA2BD8DD751DD5FDEFF82776035 /* ExperimentalButtonlessDFU.swift */; };
+		2B2484A6DAFA32E18EE7058AC927CCF9 /* LegacyDFUServiceInitiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9276D418E3165BBCE4D1AC1C65676132 /* LegacyDFUServiceInitiator.swift */; };
+		2E6C3C73FA8B97E497388F2920342408 /* DFUPeripheralSelectorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7167F67B9F412B73F68852F4EFA50808 /* DFUPeripheralSelectorDelegate.swift */; };
+		30C84EC7453606FF91CCF27C5FC3913A /* SecureDFUPeripheralDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7810427EB3C870E56054E03EEF3D68 /* SecureDFUPeripheralDelegate.swift */; };
+		324DF45ED3357CAA119EAA9D7DBB9E85 /* DFUControlPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62ADF841AA23C2181D4A06D06E71F7AB /* DFUControlPoint.swift */; };
+		3584309C9C2541AEA48E2B74C3DDA60D /* DFUStarterPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89ECCE3A4D8FBA33124064CCE250333 /* DFUStarterPeripheral.swift */; };
+		363B82333E44E82267E47E4AE8B46B02 /* DFUPeripheralSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F184F0D1B84678313F3B8A48BE5EEF6E /* DFUPeripheralSelector.swift */; };
+		3BD629B12DC96CC4BE80DC44AF9FCE7D /* DFUStreamHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60244CD3A25C0A3ADBDDE82AF26F5347 /* DFUStreamHex.swift */; };
+		3D78A91C00E60807EE6B3B67D33A6E21 /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9B2CF68D0D51425BD531E93F6E6A60 /* zip.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3DC8D32FF2B3D52D6501B507DE1EE668 /* SecureDFUService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B0AD74E603D51A54A0401C7B177144 /* SecureDFUService.swift */; };
+		3DCA052FAD41940F6C55C6C86C2F28BA /* JDStatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E09FACDA5074C93E24AD92562E85B71 /* JDStatusBarView.m */; };
+		4437E070109A3AEF263C76C444B3B233 /* SecureDFUPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE1D1BBFACB28EAFC725D66EDD95F67 /* SecureDFUPeripheral.swift */; };
+		4472DA256EFDBFB7F2C248356B946B95 /* DFUPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9BFF6FB9F5BC47A2E337237EAB68F /* DFUPeripheral.swift */; };
+		462FD86D2E3E911441454D47F20EABA4 /* DFUService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA961D8FCA20EDF9DBBD95E27122C4 /* DFUService.swift */; };
+		48EE55BDBD977CF0E0B59A56C6329901 /* Zip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47ADB0645A3C9FA79B240F78BFC9107 /* Zip.swift */; };
+		4B12C32A76B1CE1E3EBA3FE5EF36FDD3 /* QuickZip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAE14711E316C604E96E52BEEB4EF54 /* QuickZip.swift */; };
+		4C3DBC954F9F35B7D7608E9D47C8CFB1 /* ZipArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D1DEDFEECBC21D377411BA0AF37681 /* ZipArchive.swift */; };
+		51E9BD655294E26BAC914FA7C601E7A0 /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = B1FD5EE71F993EFE0E904726716BBFA6 /* unzip.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5644BF44151D5AB3F2CBB8EB6B6D6F44 /* DFUServiceInitiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F68227461BAAD661C270C4C06879C49 /* DFUServiceInitiator.swift */; };
+		58C632C23C48C8DFE9E53A2C5E4BAEC5 /* Zip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54B8D0861FE97AEBDB3D4BDF0A2831DB /* Zip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5B79EE1FA0B18CCD252E9065DFABD834 /* IntelHex2BinConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C688560F93026615577A73AA9C0E7B2 /* IntelHex2BinConverter.m */; };
+		5BA372927BAED46E3AEC63BA8DF6914A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6904E321CC8EC3C234AF2BF99B18E4F1 /* Foundation.framework */; };
+		61CBAA381E8DAECDD3BDB958526E02C3 /* DFUController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88BE92398A48CBCB7039E7F97164B40 /* DFUController.swift */; };
+		665E1951D3AA233841442B7B1E28FF70 /* DFUVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48DED8A40EF66025660FBD1E837ADCC /* DFUVersion.swift */; };
+		6660C3B944EC92C33E40D3C60D0B5DCC /* DFUServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6778DFCE96E5590ACFB838295F0A6EE8 /* DFUServiceDelegate.swift */; };
+		66EF39EB9CE58B25D15D6370451A9CA4 /* LegacyDFUExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E986B96D19E7BCFF9729A2548D452FA /* LegacyDFUExecutor.swift */; };
+		6E63EAEC9E138E1D1BF81EFB47D5E3BC /* LegacyDFUPeripheralDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5938DD1C3F75A9867C1B6D38E3F4A1 /* LegacyDFUPeripheralDelegate.swift */; };
+		7063DB5BD812F0131C599EF9C9D8AC43 /* iOSDFULibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE63AB77D7EC403FA524E25C66AB69 /* iOSDFULibrary-dummy.m */; };
+		74C89A46013F3F6AAA93D930F5C24472 /* Manifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF323DFF38F63D50F7CAEDF57170573 /* Manifest.swift */; };
+		752F6AE718819039CF2E00756745BF1C /* iOSDFULibrary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F9C92DDA0C3BB193225CD7ACFE58D453 /* iOSDFULibrary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		791DAA949CC3C23C1712F9FE562560BE /* DFUStreamZip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECE2695BA9A39FA4EE4E44776D914A3 /* DFUStreamZip.swift */; };
+		7C3B0307B141CBB8E4D9D0113138C400 /* SoftdeviceBootloaderInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFDC6E24F16F71ACEF2E3D9E738D763 /* SoftdeviceBootloaderInfo.swift */; };
+		7E5A8BA2A7944437068EE379EDD9DF11 /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = A7401AD19387C6A1AD63E24228F77979 /* crypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7F1CB290075CEBBE24BD935AC0C1586C /* JDStatusBarNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 523A4E5064E479313AA98C44A61F9045 /* JDStatusBarNotification.m */; };
+		845A9D0DE7DB7ADA1C834D1962570461 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACAB230CB886EBA87955A9745353EB0 /* SVProgressHUD.m */; };
+		8737F6D03EEC27F3A0132F66053A5DFF /* Pods-LGBluetoothExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A09F65F458AF2D526A39E087B89D10D3 /* Pods-LGBluetoothExample-dummy.m */; };
+		8B91A361BC3F84F535F9F20EAD83832A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D63CC452FED17CB5471DFE5781A4C4 /* QuartzCore.framework */; };
+		8CAF7D151CF9F4C2015794D84560963C /* Pods-LGBluetoothExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98B029A674C4382F1B6B46BDDD9206BF /* Pods-LGBluetoothExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8DE2D812B3BD5075AA9E57AE674EAED7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6904E321CC8EC3C234AF2BF99B18E4F1 /* Foundation.framework */; };
+		9361B1BA48C36AC1CF4C723E7915C37D /* DFUPeripheralDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFEF7AA9F4AF13B2EB26231F614859C /* DFUPeripheralDelegate.swift */; };
+		94CEFF678852278337AD9A9974DC2DC1 /* SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A83E33DD5EA253F9DCF1E3E734D8000 /* SVProgressHUD-dummy.m */; };
+		950F6A52A644AFB81473077D46D6A130 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421D1B144B5EBC1ECB92CBC45C351563 /* Data.swift */; };
+		97DC4798AABA5EBAC6D00DD9E8884115 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7BC52C5BF0B6D72EBA3F3D94DEF33D /* SVRadialGradientLayer.m */; };
+		9B866655A7FED0D7FDE5383D3B051605 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6904E321CC8EC3C234AF2BF99B18E4F1 /* Foundation.framework */; };
+		9D6B70F1FBDA9819AA53102CE95A559C /* SecureDFUExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B7AF64D2F258B592B7D2C627873A9 /* SecureDFUExecutor.swift */; };
+		A29716E55C9D6029716D51F111AD3BAA /* DFUFirmware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D42D1D03E61E5D2AF671102D5C7FDFC /* DFUFirmware.swift */; };
+		A8629D12FAB72ACAD4175D85E022F4D5 /* DFUStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = C814769B0CADCB883E37D110454E0995 /* DFUStream.swift */; };
+		B3F25ADC850701A6919764AD1EAD34F2 /* LoggerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE114A7FF7654387A2173527DB8342AE /* LoggerHelper.swift */; };
+		B5252700B06A7CEE763E68B5ECF69C78 /* Zip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93095D4F236D84A6022FE13950F5ADE4 /* Zip-dummy.m */; };
+		B8819E4624E16D8177A9899E340C35AA /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 96F7FDE8BD8A2F668908023375921611 /* ioapi.c */; };
+		BACB9922ECE93352DFA4E17C4BB93AD9 /* Zip.h in Headers */ = {isa = PBXBuildFile; fileRef = E34611D2729D4F0E314C906DF11652CA /* Zip.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF6C3BFDCE013088F862A9FFA2DE7CD6 /* SecureDFUServiceInitiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A618417ADD7D33CC881B62427535A2 /* SecureDFUServiceInitiator.swift */; };
+		C59B2B4973B01A88049B644EABEDC12D /* JDStatusBarView.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DFB8D762366BB8E1279FE4FC1790C7 /* JDStatusBarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C87D1B7F59E043D2C1A90EEA20F26154 /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = CC74A7ADCE5FBC9F23FFBA040C6EF0CA /* SVIndefiniteAnimatedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8BC42883EE3C6487A78F59BDCF597A8 /* LegacyDFUPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC340A08942F8469F99E95EB87E29652 /* LegacyDFUPeripheral.swift */; };
+		CA43E70F88D2F9BF2AD93B43A18CC472 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7B56D36028E88BE1A85992BB66E2F435 /* SVProgressHUD.bundle */; };
+		D0005F53BCA7BC904E91F5DDF756F395 /* crc32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FED48AB9437C5F670D23D7374CE25E /* crc32.swift */; };
+		D2B25EDC91A9E93A3A099B1EB385E320 /* ZipUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1305FB2B5F368ED494DA2ACB583F53 /* ZipUtilities.swift */; };
+		D490C2F75D77E34F4927D944CC8FCCAE /* DFUStreamBin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DE673BEF129196566B1EEA51F73306 /* DFUStreamBin.swift */; };
+		D755535B0DF8EE88DBCCA40AF73A8CBE /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = DFC0DF24ADD73FC80E0F1957117D56B7 /* unzip.c */; };
+		DA62B954B4817184DDAFC4A8760AD25B /* ManifestFirmwareInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB57A01523728C5B2F2B081AB8D9771A /* ManifestFirmwareInfo.swift */; };
+		DC5F430689C54F8E1FEA311572696A25 /* Zip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDA50A415DB1123D6505C99824991C5 /* Zip.framework */; };
+		DEA76B98223A0D3DDFB2C038C2B778BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6904E321CC8EC3C234AF2BF99B18E4F1 /* Foundation.framework */; };
+		E0015C8ABC526C3F86D7EC2D6AEA2B55 /* JDStatusBarNotification-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CEAB3068F9F348E4EC2D001A3EE62409 /* JDStatusBarNotification-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E150143D27FBE04F2D73800E92BDCBD7 /* IntelHex2BinConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = D769D7FE3322F423DC23EDD49D199A58 /* IntelHex2BinConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4B4511367E7EB6765F7C7ECE4DFF253 /* DFUServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7630638ACB0D2D1500B7D655FBB6369 /* DFUServiceController.swift */; };
+		EE527BDD8EEEB6E67359F99B594B2735 /* JDStatusBarNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = 769DCE375E792500402B6C1236669989 /* JDStatusBarNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF8CB8D64D241CABBFF0EE55F4B6A49C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6904E321CC8EC3C234AF2BF99B18E4F1 /* Foundation.framework */; };
+		F37B083D08E038CB54320E6B7AF3D9DE /* JDStatusBarNotification-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 43313C28BF4B9C826B1C8C09F2046CF4 /* JDStatusBarNotification-dummy.m */; };
+		F6A204A5B428CABBAC973AE82FEE2784 /* DFUExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBFB967985235EBB2A04589392C14DF /* DFUExecutor.swift */; };
+		FB03F80233DCC4DCCB295EA77E7E48A8 /* DFUServiceSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F94DBEE4E86DDE4B956745951BDD8C5 /* DFUServiceSelector.swift */; };
+		FCC5656E8803B647779563900F164225 /* JDStatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCBE7E0E4AE6F3498B5FF28D984A0F7 /* JDStatusBarStyle.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0CBC6108682FFADD50BE72EB557F09A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D83E505BF1E81A4AAA9A3A5CAA45E9E;
+			remoteInfo = JDStatusBarNotification;
+		};
+		1CFC4BD3A184C6ABE9A2A74501A45FD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 570B1EFB2D11F5B06166FDA2A614F81C;
+			remoteInfo = iOSDFULibrary;
+		};
+		7945ED225FDDD2E64539F9E711C82BBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE77DCBA10C4CF61745F1D79977081B7;
+			remoteInfo = SVProgressHUD;
+		};
+		9B52C3E672022E7B3495DB2556EA0069 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DE24706FE9CF4E6C5DB4508F180A481;
+			remoteInfo = Zip;
+		};
+		F090DFC5DE05C05BCF027F5A7E1C58F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DE24706FE9CF4E6C5DB4508F180A481;
+			remoteInfo = Zip;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01DDC3173ED2CB35C8D3BD8D12A9272A /* JDStatusBarStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JDStatusBarStyle.h; path = JDStatusBarNotification/JDStatusBarStyle.h; sourceTree = "<group>"; };
+		044E0EDAF6E36A7EED553D83BE20F090 /* SVProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVProgressHUD.xcconfig; sourceTree = "<group>"; };
+		061B7AF64D2F258B592B7D2C627873A9 /* SecureDFUExecutor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUExecutor.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/DFU/SecureDFUExecutor.swift; sourceTree = "<group>"; };
+		078ECBE46680AB3D0D632F2B48AC7ABB /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = SVProgressHUD/SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		0A5938DD1C3F75A9867C1B6D38E3F4A1 /* LegacyDFUPeripheralDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegacyDFUPeripheralDelegate.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Peripherals/LegacyDFUPeripheralDelegate.swift; sourceTree = "<group>"; };
+		0B7810427EB3C870E56054E03EEF3D68 /* SecureDFUPeripheralDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUPeripheralDelegate.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/Peripheral/SecureDFUPeripheralDelegate.swift; sourceTree = "<group>"; };
+		0D42D1D03E61E5D2AF671102D5C7FDFC /* DFUFirmware.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUFirmware.swift; path = iOSDFULibrary/Classes/Implementation/Firmware/DFUFirmware.swift; sourceTree = "<group>"; };
+		0DFDC6E24F16F71ACEF2E3D9E738D763 /* SoftdeviceBootloaderInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SoftdeviceBootloaderInfo.swift; path = iOSDFULibrary/Classes/Utilities/DFUPackage/Manifest/SoftdeviceBootloaderInfo.swift; sourceTree = "<group>"; };
+		0E986B96D19E7BCFF9729A2548D452FA /* LegacyDFUExecutor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegacyDFUExecutor.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/DFU/LegacyDFUExecutor.swift; sourceTree = "<group>"; };
+		122036B7C2B8C1C04195660220309D0F /* JDStatusBarNotification-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JDStatusBarNotification-prefix.pch"; sourceTree = "<group>"; };
+		13A618417ADD7D33CC881B62427535A2 /* SecureDFUServiceInitiator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUServiceInitiator.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/DFU/SecureDFUServiceInitiator.swift; sourceTree = "<group>"; };
+		15730D0789FE3D146CA6F38B1D1F0031 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVRadialGradientLayer.h; path = SVProgressHUD/SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		15DE63AB77D7EC403FA524E25C66AB69 /* iOSDFULibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iOSDFULibrary-dummy.m"; sourceTree = "<group>"; };
+		17FED48AB9437C5F670D23D7374CE25E /* crc32.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = crc32.swift; path = iOSDFULibrary/Classes/Utilities/crc32.swift; sourceTree = "<group>"; };
+		1A9B2CF68D0D51425BD531E93F6E6A60 /* zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = zip.h; path = Zip/minizip/zip.h; sourceTree = "<group>"; };
+		1F359956D0E5CF4BD4E197D5DCEB59BA /* ioapi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi.h; path = Zip/minizip/ioapi.h; sourceTree = "<group>"; };
+		2935165B602360895CA9889AAB8EC064 /* zip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = zip.c; path = Zip/minizip/zip.c; sourceTree = "<group>"; };
+		3180D9DDFCFD9758DEB86EDA4940D5F2 /* iOSDFULibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSDFULibrary-prefix.pch"; sourceTree = "<group>"; };
+		347A53950E73DA92B7608DCF8B952DA7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35DE673BEF129196566B1EEA51F73306 /* DFUStreamBin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUStreamBin.swift; path = iOSDFULibrary/Classes/Utilities/Streams/DFUStreamBin.swift; sourceTree = "<group>"; };
+		367EE1C24D40C6A165B479E25A571D7F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37B9BFF6FB9F5BC47A2E337237EAB68F /* DFUPeripheral.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUPeripheral.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFUPeripheral.swift; sourceTree = "<group>"; };
+		3ACAB230CB886EBA87955A9745353EB0 /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
+		3BAE14711E316C604E96E52BEEB4EF54 /* QuickZip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickZip.swift; path = Zip/QuickZip.swift; sourceTree = "<group>"; };
+		3C1305FB2B5F368ED494DA2ACB583F53 /* ZipUtilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZipUtilities.swift; path = Zip/ZipUtilities.swift; sourceTree = "<group>"; };
+		3EAB32B02078A6769F5E042604E0EB7D /* SVProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SVProgressHUD.modulemap; sourceTree = "<group>"; };
+		405F2FA2BD8DD751DD5FDEFF82776035 /* ExperimentalButtonlessDFU.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExperimentalButtonlessDFU.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/Characteristics/ExperimentalButtonlessDFU.swift; sourceTree = "<group>"; };
+		421D1B144B5EBC1ECB92CBC45C351563 /* Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Data.swift; path = iOSDFULibrary/Classes/Utilities/Data.swift; sourceTree = "<group>"; };
+		43313C28BF4B9C826B1C8C09F2046CF4 /* JDStatusBarNotification-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JDStatusBarNotification-dummy.m"; sourceTree = "<group>"; };
+		434EA313D1345FA330FB04885C003303 /* Double.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Double.swift; path = iOSDFULibrary/Classes/Utilities/Double.swift; sourceTree = "<group>"; };
+		4AFEF7AA9F4AF13B2EB26231F614859C /* DFUPeripheralDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUPeripheralDelegate.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFUPeripheralDelegate.swift; sourceTree = "<group>"; };
+		4DDA961D8FCA20EDF9DBBD95E27122C4 /* DFUService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUService.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFUService.swift; sourceTree = "<group>"; };
+		523A4E5064E479313AA98C44A61F9045 /* JDStatusBarNotification.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JDStatusBarNotification.m; path = JDStatusBarNotification/JDStatusBarNotification.m; sourceTree = "<group>"; };
+		54B8D0861FE97AEBDB3D4BDF0A2831DB /* Zip-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Zip-umbrella.h"; sourceTree = "<group>"; };
+		566CC264AC821223C968ABA3B336BF36 /* Pods-LGBluetoothExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LGBluetoothExample-frameworks.sh"; sourceTree = "<group>"; };
+		58E038DA725445331319EB03AF5C340C /* Zip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Zip.modulemap; sourceTree = "<group>"; };
+		59F739CBD9121E7166A2B3C296557229 /* Pods-LGBluetoothExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LGBluetoothExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		5BBF24970AA31EDE817A3939982E138F /* JDStatusBarNotification.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = JDStatusBarNotification.modulemap; sourceTree = "<group>"; };
+		5C688560F93026615577A73AA9C0E7B2 /* IntelHex2BinConverter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IntelHex2BinConverter.m; path = iOSDFULibrary/Classes/Utilities/HexToBinConverter/IntelHex2BinConverter.m; sourceTree = "<group>"; };
+		5DFDC4A3C0468075F9993FAE4DAAF357 /* Pods-LGBluetoothExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-LGBluetoothExample.modulemap"; sourceTree = "<group>"; };
+		5F94DBEE4E86DDE4B956745951BDD8C5 /* DFUServiceSelector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUServiceSelector.swift; path = iOSDFULibrary/Classes/Implementation/DFUSelector/DFUServiceSelector.swift; sourceTree = "<group>"; };
+		5FB0BD8CE8A1A3ACAF627F20BE801022 /* iOSDFULibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iOSDFULibrary.xcconfig; sourceTree = "<group>"; };
+		60244CD3A25C0A3ADBDDE82AF26F5347 /* DFUStreamHex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUStreamHex.swift; path = iOSDFULibrary/Classes/Utilities/Streams/DFUStreamHex.swift; sourceTree = "<group>"; };
+		62ADF841AA23C2181D4A06D06E71F7AB /* DFUControlPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUControlPoint.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Characteristics/DFUControlPoint.swift; sourceTree = "<group>"; };
+		65D63CC452FED17CB5471DFE5781A4C4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		65F3E90F67B99EDFB7233A4486AD65D3 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressAnimatedView.h; path = SVProgressHUD/SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		6778DFCE96E5590ACFB838295F0A6EE8 /* DFUServiceDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUServiceDelegate.swift; path = iOSDFULibrary/Classes/Implementation/DFUServiceDelegate.swift; sourceTree = "<group>"; };
+		6828A167356BD35741A7AFDDAF458662 /* Pods-LGBluetoothExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LGBluetoothExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6904E321CC8EC3C234AF2BF99B18E4F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6A83E33DD5EA253F9DCF1E3E734D8000 /* SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		6CE1D1BBFACB28EAFC725D66EDD95F67 /* SecureDFUPeripheral.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUPeripheral.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/Peripheral/SecureDFUPeripheral.swift; sourceTree = "<group>"; };
+		6ECE2695BA9A39FA4EE4E44776D914A3 /* DFUStreamZip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUStreamZip.swift; path = iOSDFULibrary/Classes/Utilities/Streams/DFUStreamZip.swift; sourceTree = "<group>"; };
+		6F68227461BAAD661C270C4C06879C49 /* DFUServiceInitiator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUServiceInitiator.swift; path = iOSDFULibrary/Classes/Implementation/DFUServiceInitiator.swift; sourceTree = "<group>"; };
+		7167F67B9F412B73F68852F4EFA50808 /* DFUPeripheralSelectorDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUPeripheralSelectorDelegate.swift; path = iOSDFULibrary/Classes/Implementation/DFUPeripheralSelectorDelegate.swift; sourceTree = "<group>"; };
+		72B2F9516E8E208A51E5C3CB24D05720 /* Zip.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Zip.xcconfig; sourceTree = "<group>"; };
+		769DCE375E792500402B6C1236669989 /* JDStatusBarNotification.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JDStatusBarNotification.h; path = JDStatusBarNotification/JDStatusBarNotification.h; sourceTree = "<group>"; };
+		782981B2A0AFC00CC432889BEA5FAC78 /* JDStatusBarNotification.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JDStatusBarNotification.xcconfig; sourceTree = "<group>"; };
+		7A19F8B72BDA31FA3F675880DFBF5B02 /* Pods-LGBluetoothExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LGBluetoothExample-resources.sh"; sourceTree = "<group>"; };
+		7B56D36028E88BE1A85992BB66E2F435 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
+		7BB97695DD8393254891518B98A3C619 /* DFUPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUPacket.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Characteristics/DFUPacket.swift; sourceTree = "<group>"; };
+		7E9A695F70554D166B42E871203AB10F /* Pods_LGBluetoothExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LGBluetoothExample.framework; path = "Pods-LGBluetoothExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EDA50A415DB1123D6505C99824991C5 /* Zip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Zip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8082D61B14D81BE85D8B77DFD0930C62 /* JDStatusBarNotification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JDStatusBarNotification.framework; path = JDStatusBarNotification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8351351D617B6BA0941753917A597BAC /* SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		87CAFB26B21FF6DEACAC83803208FEAE /* Zip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Zip.framework; path = Zip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CFDDA463EFC0839C2FF9105A8DEEF52 /* Zip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Zip-prefix.pch"; sourceTree = "<group>"; };
+		9276D418E3165BBCE4D1AC1C65676132 /* LegacyDFUServiceInitiator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegacyDFUServiceInitiator.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/DFU/LegacyDFUServiceInitiator.swift; sourceTree = "<group>"; };
+		93095D4F236D84A6022FE13950F5ADE4 /* Zip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Zip-dummy.m"; sourceTree = "<group>"; };
+		933F541E3E967CE8F15C116A76955D96 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SVProgressHUD.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		940FE8D45FBA9E65B89541FD7374FA09 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96F7FDE8BD8A2F668908023375921611 /* ioapi.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi.c; path = Zip/minizip/ioapi.c; sourceTree = "<group>"; };
+		98B029A674C4382F1B6B46BDDD9206BF /* Pods-LGBluetoothExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LGBluetoothExample-umbrella.h"; sourceTree = "<group>"; };
+		9BA271B5C7072B84FFFE483909DFE0CD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BAF060B8F3B38D360970843584E913C /* iOSDFULibrary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = iOSDFULibrary.modulemap; sourceTree = "<group>"; };
+		9E09FACDA5074C93E24AD92562E85B71 /* JDStatusBarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JDStatusBarView.m; path = JDStatusBarNotification/JDStatusBarView.m; sourceTree = "<group>"; };
+		9EDAE1FD7F1C8C7EE881CE135168A69C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A09F65F458AF2D526A39E087B89D10D3 /* Pods-LGBluetoothExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LGBluetoothExample-dummy.m"; sourceTree = "<group>"; };
+		A2B19B2292C1879E4A45887C5142485F /* SecureDFUPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUPacket.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/Characteristics/SecureDFUPacket.swift; sourceTree = "<group>"; };
+		A7401AD19387C6A1AD63E24228F77979 /* crypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypt.h; path = Zip/minizip/crypt.h; sourceTree = "<group>"; };
+		A7630638ACB0D2D1500B7D655FBB6369 /* DFUServiceController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUServiceController.swift; path = iOSDFULibrary/Classes/Implementation/DFUServiceController.swift; sourceTree = "<group>"; };
+		A9229F5BA2E5C87BCB861B6F00F87ABC /* Pods-LGBluetoothExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LGBluetoothExample.release.xcconfig"; sourceTree = "<group>"; };
+		AB57A01523728C5B2F2B081AB8D9771A /* ManifestFirmwareInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ManifestFirmwareInfo.swift; path = iOSDFULibrary/Classes/Utilities/DFUPackage/Manifest/ManifestFirmwareInfo.swift; sourceTree = "<group>"; };
+		ACBADBADA9B9F0992C44BD4D11A5E411 /* SecureDFUControlPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUControlPoint.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/Characteristics/SecureDFUControlPoint.swift; sourceTree = "<group>"; };
+		AE114A7FF7654387A2173527DB8342AE /* LoggerHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoggerHelper.swift; path = iOSDFULibrary/Classes/Utilities/Logging/LoggerHelper.swift; sourceTree = "<group>"; };
+		B1FD5EE71F993EFE0E904726716BBFA6 /* unzip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = unzip.h; path = Zip/minizip/unzip.h; sourceTree = "<group>"; };
+		B78F3779B2D09037FD2B561EF92C80B8 /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
+		B93C74D58671EA86FD820B27635AF607 /* LoggerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoggerDelegate.swift; path = iOSDFULibrary/Classes/Utilities/Logging/LoggerDelegate.swift; sourceTree = "<group>"; };
+		B9B0AD74E603D51A54A0401C7B177144 /* SecureDFUService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUService.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/Services/SecureDFUService.swift; sourceTree = "<group>"; };
+		BBF323DFF38F63D50F7CAEDF57170573 /* Manifest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manifest.swift; path = iOSDFULibrary/Classes/Utilities/DFUPackage/Manifest/Manifest.swift; sourceTree = "<group>"; };
+		C814769B0CADCB883E37D110454E0995 /* DFUStream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUStream.swift; path = iOSDFULibrary/Classes/Utilities/Streams/DFUStream.swift; sourceTree = "<group>"; };
+		CC340A08942F8469F99E95EB87E29652 /* LegacyDFUPeripheral.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegacyDFUPeripheral.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Peripherals/LegacyDFUPeripheral.swift; sourceTree = "<group>"; };
+		CC74A7ADCE5FBC9F23FFBA040C6EF0CA /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		CCCBE7E0E4AE6F3498B5FF28D984A0F7 /* JDStatusBarStyle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JDStatusBarStyle.m; path = JDStatusBarNotification/JDStatusBarStyle.m; sourceTree = "<group>"; };
+		CEAB3068F9F348E4EC2D001A3EE62409 /* JDStatusBarNotification-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JDStatusBarNotification-umbrella.h"; sourceTree = "<group>"; };
+		D48DED8A40EF66025660FBD1E837ADCC /* DFUVersion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUVersion.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Characteristics/DFUVersion.swift; sourceTree = "<group>"; };
+		D769D7FE3322F423DC23EDD49D199A58 /* IntelHex2BinConverter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IntelHex2BinConverter.h; path = iOSDFULibrary/Classes/Utilities/HexToBinConverter/IntelHex2BinConverter.h; sourceTree = "<group>"; };
+		D7DFB8D762366BB8E1279FE4FC1790C7 /* JDStatusBarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JDStatusBarView.h; path = JDStatusBarNotification/JDStatusBarView.h; sourceTree = "<group>"; };
+		D88BE92398A48CBCB7039E7F97164B40 /* DFUController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUController.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFUController.swift; sourceTree = "<group>"; };
+		DFC0DF24ADD73FC80E0F1957117D56B7 /* unzip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = unzip.c; path = Zip/minizip/unzip.c; sourceTree = "<group>"; };
+		E196256A3577AC7EE1457211EB8932B1 /* iOSDFULibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = iOSDFULibrary.framework; path = iOSDFULibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1D1DEDFEECBC21D377411BA0AF37681 /* ZipArchive.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZipArchive.swift; path = iOSDFULibrary/Classes/Utilities/ZipArchive.swift; sourceTree = "<group>"; };
+		E34611D2729D4F0E314C906DF11652CA /* Zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Zip.h; path = Zip/Zip.h; sourceTree = "<group>"; };
+		E47ADB0645A3C9FA79B240F78BFC9107 /* Zip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Zip.swift; path = Zip/Zip.swift; sourceTree = "<group>"; };
+		E89EE7B10180B2FBFC30B0D698916A8D /* LegacyDFUService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegacyDFUService.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Services/LegacyDFUService.swift; sourceTree = "<group>"; };
+		EBA7B03C899946A23FC4429E640CD224 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressAnimatedView.m; path = SVProgressHUD/SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		F184F0D1B84678313F3B8A48BE5EEF6E /* DFUPeripheralSelector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUPeripheralSelector.swift; path = iOSDFULibrary/Classes/Implementation/DFUPeripheralSelector.swift; sourceTree = "<group>"; };
+		F30935E7098798B176AC654A64904A45 /* Pods-LGBluetoothExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LGBluetoothExample.debug.xcconfig"; sourceTree = "<group>"; };
+		F89ECCE3A4D8FBA33124064CCE250333 /* DFUStarterPeripheral.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUStarterPeripheral.swift; path = iOSDFULibrary/Classes/Implementation/DFUSelector/DFUStarterPeripheral.swift; sourceTree = "<group>"; };
+		F9C92DDA0C3BB193225CD7ACFE58D453 /* iOSDFULibrary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSDFULibrary-umbrella.h"; sourceTree = "<group>"; };
+		FF1D8C0B7297AAB01E51253AE9CA9A5E /* SVProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-umbrella.h"; sourceTree = "<group>"; };
+		FF7BC52C5BF0B6D72EBA3F3D94DEF33D /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVRadialGradientLayer.m; path = SVProgressHUD/SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		FFBFB967985235EBB2A04589392C14DF /* DFUExecutor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUExecutor.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFUExecutor.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F9134A25F2008CB63B3E36E999B1CCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF8CB8D64D241CABBFF0EE55F4B6A49C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43A7A9405185BD05BDA6BA45785CAE0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B866655A7FED0D7FDE5383D3B051605 /* Foundation.framework in Frameworks */,
+				1C046AFC38A756DB8DD364A801E65962 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65256EE91631C3389C32CF9A5C33BFE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEA76B98223A0D3DDFB2C038C2B778BC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90EF541036EED2F4F41BA4140033B3B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BA372927BAED46E3AEC63BA8DF6914A /* Foundation.framework in Frameworks */,
+				8B91A361BC3F84F535F9F20EAD83832A /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE8062B1EA73C0788A77D1BEC88A5112 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DE2D812B3BD5075AA9E57AE674EAED7 /* Foundation.framework in Frameworks */,
+				DC5F430689C54F8E1FEA311572696A25 /* Zip.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13CB8E2C07CACE904C30CB81CC59FA0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F96BA780E0120149518C9436B3E48C3 /* iOSDFULibrary */,
+				80BA7FD079823709AB551A8B64730A88 /* JDStatusBarNotification */,
+				F372D3481DA05EE87DF1D39633426735 /* SVProgressHUD */,
+				6D6643B52AA0960D34AC9D34CA7E978A /* Zip */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3613DEF5BF056D6732AC22E6914AE307 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BA271B5C7072B84FFFE483909DFE0CD /* Info.plist */,
+				5BBF24970AA31EDE817A3939982E138F /* JDStatusBarNotification.modulemap */,
+				782981B2A0AFC00CC432889BEA5FAC78 /* JDStatusBarNotification.xcconfig */,
+				43313C28BF4B9C826B1C8C09F2046CF4 /* JDStatusBarNotification-dummy.m */,
+				122036B7C2B8C1C04195660220309D0F /* JDStatusBarNotification-prefix.pch */,
+				CEAB3068F9F348E4EC2D001A3EE62409 /* JDStatusBarNotification-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JDStatusBarNotification";
+			sourceTree = "<group>";
+		};
+		4F96BA780E0120149518C9436B3E48C3 /* iOSDFULibrary */ = {
+			isa = PBXGroup;
+			children = (
+				17FED48AB9437C5F670D23D7374CE25E /* crc32.swift */,
+				421D1B144B5EBC1ECB92CBC45C351563 /* Data.swift */,
+				D88BE92398A48CBCB7039E7F97164B40 /* DFUController.swift */,
+				62ADF841AA23C2181D4A06D06E71F7AB /* DFUControlPoint.swift */,
+				FFBFB967985235EBB2A04589392C14DF /* DFUExecutor.swift */,
+				0D42D1D03E61E5D2AF671102D5C7FDFC /* DFUFirmware.swift */,
+				7BB97695DD8393254891518B98A3C619 /* DFUPacket.swift */,
+				37B9BFF6FB9F5BC47A2E337237EAB68F /* DFUPeripheral.swift */,
+				4AFEF7AA9F4AF13B2EB26231F614859C /* DFUPeripheralDelegate.swift */,
+				F184F0D1B84678313F3B8A48BE5EEF6E /* DFUPeripheralSelector.swift */,
+				7167F67B9F412B73F68852F4EFA50808 /* DFUPeripheralSelectorDelegate.swift */,
+				4DDA961D8FCA20EDF9DBBD95E27122C4 /* DFUService.swift */,
+				A7630638ACB0D2D1500B7D655FBB6369 /* DFUServiceController.swift */,
+				6778DFCE96E5590ACFB838295F0A6EE8 /* DFUServiceDelegate.swift */,
+				6F68227461BAAD661C270C4C06879C49 /* DFUServiceInitiator.swift */,
+				5F94DBEE4E86DDE4B956745951BDD8C5 /* DFUServiceSelector.swift */,
+				F89ECCE3A4D8FBA33124064CCE250333 /* DFUStarterPeripheral.swift */,
+				C814769B0CADCB883E37D110454E0995 /* DFUStream.swift */,
+				35DE673BEF129196566B1EEA51F73306 /* DFUStreamBin.swift */,
+				60244CD3A25C0A3ADBDDE82AF26F5347 /* DFUStreamHex.swift */,
+				6ECE2695BA9A39FA4EE4E44776D914A3 /* DFUStreamZip.swift */,
+				D48DED8A40EF66025660FBD1E837ADCC /* DFUVersion.swift */,
+				434EA313D1345FA330FB04885C003303 /* Double.swift */,
+				405F2FA2BD8DD751DD5FDEFF82776035 /* ExperimentalButtonlessDFU.swift */,
+				D769D7FE3322F423DC23EDD49D199A58 /* IntelHex2BinConverter.h */,
+				5C688560F93026615577A73AA9C0E7B2 /* IntelHex2BinConverter.m */,
+				0E986B96D19E7BCFF9729A2548D452FA /* LegacyDFUExecutor.swift */,
+				CC340A08942F8469F99E95EB87E29652 /* LegacyDFUPeripheral.swift */,
+				0A5938DD1C3F75A9867C1B6D38E3F4A1 /* LegacyDFUPeripheralDelegate.swift */,
+				E89EE7B10180B2FBFC30B0D698916A8D /* LegacyDFUService.swift */,
+				9276D418E3165BBCE4D1AC1C65676132 /* LegacyDFUServiceInitiator.swift */,
+				B93C74D58671EA86FD820B27635AF607 /* LoggerDelegate.swift */,
+				AE114A7FF7654387A2173527DB8342AE /* LoggerHelper.swift */,
+				BBF323DFF38F63D50F7CAEDF57170573 /* Manifest.swift */,
+				AB57A01523728C5B2F2B081AB8D9771A /* ManifestFirmwareInfo.swift */,
+				ACBADBADA9B9F0992C44BD4D11A5E411 /* SecureDFUControlPoint.swift */,
+				061B7AF64D2F258B592B7D2C627873A9 /* SecureDFUExecutor.swift */,
+				A2B19B2292C1879E4A45887C5142485F /* SecureDFUPacket.swift */,
+				6CE1D1BBFACB28EAFC725D66EDD95F67 /* SecureDFUPeripheral.swift */,
+				0B7810427EB3C870E56054E03EEF3D68 /* SecureDFUPeripheralDelegate.swift */,
+				B9B0AD74E603D51A54A0401C7B177144 /* SecureDFUService.swift */,
+				13A618417ADD7D33CC881B62427535A2 /* SecureDFUServiceInitiator.swift */,
+				0DFDC6E24F16F71ACEF2E3D9E738D763 /* SoftdeviceBootloaderInfo.swift */,
+				E1D1DEDFEECBC21D377411BA0AF37681 /* ZipArchive.swift */,
+				FADADD7F44CB93A1C21EB0DAADDD3C58 /* Support Files */,
+			);
+			name = iOSDFULibrary;
+			path = iOSDFULibrary;
+			sourceTree = "<group>";
+		};
+		62E06E5A517220243C174925F50D9F56 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				347A53950E73DA92B7608DCF8B952DA7 /* Info.plist */,
+				58E038DA725445331319EB03AF5C340C /* Zip.modulemap */,
+				72B2F9516E8E208A51E5C3CB24D05720 /* Zip.xcconfig */,
+				93095D4F236D84A6022FE13950F5ADE4 /* Zip-dummy.m */,
+				8CFDDA463EFC0839C2FF9105A8DEEF52 /* Zip-prefix.pch */,
+				54B8D0861FE97AEBDB3D4BDF0A2831DB /* Zip-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Zip";
+			sourceTree = "<group>";
+		};
+		6D6643B52AA0960D34AC9D34CA7E978A /* Zip */ = {
+			isa = PBXGroup;
+			children = (
+				A7401AD19387C6A1AD63E24228F77979 /* crypt.h */,
+				96F7FDE8BD8A2F668908023375921611 /* ioapi.c */,
+				1F359956D0E5CF4BD4E197D5DCEB59BA /* ioapi.h */,
+				3BAE14711E316C604E96E52BEEB4EF54 /* QuickZip.swift */,
+				DFC0DF24ADD73FC80E0F1957117D56B7 /* unzip.c */,
+				B1FD5EE71F993EFE0E904726716BBFA6 /* unzip.h */,
+				2935165B602360895CA9889AAB8EC064 /* zip.c */,
+				1A9B2CF68D0D51425BD531E93F6E6A60 /* zip.h */,
+				E34611D2729D4F0E314C906DF11652CA /* Zip.h */,
+				E47ADB0645A3C9FA79B240F78BFC9107 /* Zip.swift */,
+				3C1305FB2B5F368ED494DA2ACB583F53 /* ZipUtilities.swift */,
+				62E06E5A517220243C174925F50D9F56 /* Support Files */,
+			);
+			name = Zip;
+			path = Zip;
+			sourceTree = "<group>";
+		};
+		7212AC09F611B9292ECF83F04B5C7D33 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9EDAE1FD7F1C8C7EE881CE135168A69C /* Info.plist */,
+				3EAB32B02078A6769F5E042604E0EB7D /* SVProgressHUD.modulemap */,
+				044E0EDAF6E36A7EED553D83BE20F090 /* SVProgressHUD.xcconfig */,
+				6A83E33DD5EA253F9DCF1E3E734D8000 /* SVProgressHUD-dummy.m */,
+				8351351D617B6BA0941753917A597BAC /* SVProgressHUD-prefix.pch */,
+				FF1D8C0B7297AAB01E51253AE9CA9A5E /* SVProgressHUD-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SVProgressHUD";
+			sourceTree = "<group>";
+		};
+		7C4853232ED39B5A155DB405FB62986C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A38049BC1BE1914C99F28D170DA1F3C9 /* Pods-LGBluetoothExample */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				DFBEF259F82771421E18C56F3A269953 /* Frameworks */,
+				13CB8E2C07CACE904C30CB81CC59FA0D /* Pods */,
+				934B8B1A35CA15615F1F79DE52559B9A /* Products */,
+				7C4853232ED39B5A155DB405FB62986C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		80BA7FD079823709AB551A8B64730A88 /* JDStatusBarNotification */ = {
+			isa = PBXGroup;
+			children = (
+				769DCE375E792500402B6C1236669989 /* JDStatusBarNotification.h */,
+				523A4E5064E479313AA98C44A61F9045 /* JDStatusBarNotification.m */,
+				01DDC3173ED2CB35C8D3BD8D12A9272A /* JDStatusBarStyle.h */,
+				CCCBE7E0E4AE6F3498B5FF28D984A0F7 /* JDStatusBarStyle.m */,
+				D7DFB8D762366BB8E1279FE4FC1790C7 /* JDStatusBarView.h */,
+				9E09FACDA5074C93E24AD92562E85B71 /* JDStatusBarView.m */,
+				3613DEF5BF056D6732AC22E6914AE307 /* Support Files */,
+			);
+			name = JDStatusBarNotification;
+			path = JDStatusBarNotification;
+			sourceTree = "<group>";
+		};
+		90505C02814A25B499ED4436F331E3FA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6904E321CC8EC3C234AF2BF99B18E4F1 /* Foundation.framework */,
+				65D63CC452FED17CB5471DFE5781A4C4 /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		934B8B1A35CA15615F1F79DE52559B9A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E196256A3577AC7EE1457211EB8932B1 /* iOSDFULibrary.framework */,
+				8082D61B14D81BE85D8B77DFD0930C62 /* JDStatusBarNotification.framework */,
+				7E9A695F70554D166B42E871203AB10F /* Pods_LGBluetoothExample.framework */,
+				933F541E3E967CE8F15C116A76955D96 /* SVProgressHUD.framework */,
+				87CAFB26B21FF6DEACAC83803208FEAE /* Zip.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9913BEE69D188A5A0726AF6EE4B106E6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7B56D36028E88BE1A85992BB66E2F435 /* SVProgressHUD.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A38049BC1BE1914C99F28D170DA1F3C9 /* Pods-LGBluetoothExample */ = {
+			isa = PBXGroup;
+			children = (
+				940FE8D45FBA9E65B89541FD7374FA09 /* Info.plist */,
+				5DFDC4A3C0468075F9993FAE4DAAF357 /* Pods-LGBluetoothExample.modulemap */,
+				6828A167356BD35741A7AFDDAF458662 /* Pods-LGBluetoothExample-acknowledgements.markdown */,
+				59F739CBD9121E7166A2B3C296557229 /* Pods-LGBluetoothExample-acknowledgements.plist */,
+				A09F65F458AF2D526A39E087B89D10D3 /* Pods-LGBluetoothExample-dummy.m */,
+				566CC264AC821223C968ABA3B336BF36 /* Pods-LGBluetoothExample-frameworks.sh */,
+				7A19F8B72BDA31FA3F675880DFBF5B02 /* Pods-LGBluetoothExample-resources.sh */,
+				98B029A674C4382F1B6B46BDDD9206BF /* Pods-LGBluetoothExample-umbrella.h */,
+				F30935E7098798B176AC654A64904A45 /* Pods-LGBluetoothExample.debug.xcconfig */,
+				A9229F5BA2E5C87BCB861B6F00F87ABC /* Pods-LGBluetoothExample.release.xcconfig */,
+			);
+			name = "Pods-LGBluetoothExample";
+			path = "Target Support Files/Pods-LGBluetoothExample";
+			sourceTree = "<group>";
+		};
+		DFBEF259F82771421E18C56F3A269953 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EDA50A415DB1123D6505C99824991C5 /* Zip.framework */,
+				90505C02814A25B499ED4436F331E3FA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F372D3481DA05EE87DF1D39633426735 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				CC74A7ADCE5FBC9F23FFBA040C6EF0CA /* SVIndefiniteAnimatedView.h */,
+				078ECBE46680AB3D0D632F2B48AC7ABB /* SVIndefiniteAnimatedView.m */,
+				65F3E90F67B99EDFB7233A4486AD65D3 /* SVProgressAnimatedView.h */,
+				EBA7B03C899946A23FC4429E640CD224 /* SVProgressAnimatedView.m */,
+				B78F3779B2D09037FD2B561EF92C80B8 /* SVProgressHUD.h */,
+				3ACAB230CB886EBA87955A9745353EB0 /* SVProgressHUD.m */,
+				15730D0789FE3D146CA6F38B1D1F0031 /* SVRadialGradientLayer.h */,
+				FF7BC52C5BF0B6D72EBA3F3D94DEF33D /* SVRadialGradientLayer.m */,
+				9913BEE69D188A5A0726AF6EE4B106E6 /* Resources */,
+				7212AC09F611B9292ECF83F04B5C7D33 /* Support Files */,
+			);
+			name = SVProgressHUD;
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		FADADD7F44CB93A1C21EB0DAADDD3C58 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				367EE1C24D40C6A165B479E25A571D7F /* Info.plist */,
+				9BAF060B8F3B38D360970843584E913C /* iOSDFULibrary.modulemap */,
+				5FB0BD8CE8A1A3ACAF627F20BE801022 /* iOSDFULibrary.xcconfig */,
+				15DE63AB77D7EC403FA524E25C66AB69 /* iOSDFULibrary-dummy.m */,
+				3180D9DDFCFD9758DEB86EDA4940D5F2 /* iOSDFULibrary-prefix.pch */,
+				F9C92DDA0C3BB193225CD7ACFE58D453 /* iOSDFULibrary-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/iOSDFULibrary";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		37ADE5075FF8178853B1A5F4434D07C3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E150143D27FBE04F2D73800E92BDCBD7 /* IntelHex2BinConverter.h in Headers */,
+				752F6AE718819039CF2E00756745BF1C /* iOSDFULibrary-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68C4A0F331734F80991463181A98DC4A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0015C8ABC526C3F86D7EC2D6AEA2B55 /* JDStatusBarNotification-umbrella.h in Headers */,
+				EE527BDD8EEEB6E67359F99B594B2735 /* JDStatusBarNotification.h in Headers */,
+				17F35E34D9AB22D81FBA77B6DCF1C3BB /* JDStatusBarStyle.h in Headers */,
+				C59B2B4973B01A88049B644EABEDC12D /* JDStatusBarView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7E5ACCD9439D9B4B93818039F858A33 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E5A8BA2A7944437068EE379EDD9DF11 /* crypt.h in Headers */,
+				0A8CC78B7D5522AFDB7660C919492110 /* ioapi.h in Headers */,
+				51E9BD655294E26BAC914FA7C601E7A0 /* unzip.h in Headers */,
+				58C632C23C48C8DFE9E53A2C5E4BAEC5 /* Zip-umbrella.h in Headers */,
+				BACB9922ECE93352DFA4E17C4BB93AD9 /* Zip.h in Headers */,
+				3D78A91C00E60807EE6B3B67D33A6E21 /* zip.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDBB7B3DB8B9BA31D6FCC79055AD202A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CAF7D151CF9F4C2015794D84560963C /* Pods-LGBluetoothExample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFB60A35ECB5C24A829589D4BE67ED45 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C87D1B7F59E043D2C1A90EEA20F26154 /* SVIndefiniteAnimatedView.h in Headers */,
+				220CD3B3E502DD0AF25C391B68358CDD /* SVProgressAnimatedView.h in Headers */,
+				0ACDCC115944550CAFB9EE77B093D10B /* SVProgressHUD-umbrella.h in Headers */,
+				0D092872D68602BA5B095212E066EDFF /* SVProgressHUD.h in Headers */,
+				1F25975D6B128FBE8075F26975B829BE /* SVRadialGradientLayer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0D83E505BF1E81A4AAA9A3A5CAA45E9E /* JDStatusBarNotification */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FE069DE3284CB945AAF219846499B56 /* Build configuration list for PBXNativeTarget "JDStatusBarNotification" */;
+			buildPhases = (
+				77C53A47F3D31284ED2A42F6FBFE1D84 /* Sources */,
+				43A7A9405185BD05BDA6BA45785CAE0D /* Frameworks */,
+				68C4A0F331734F80991463181A98DC4A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JDStatusBarNotification;
+			productName = JDStatusBarNotification;
+			productReference = 8082D61B14D81BE85D8B77DFD0930C62 /* JDStatusBarNotification.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		570B1EFB2D11F5B06166FDA2A614F81C /* iOSDFULibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46EC2299A313886B883737DA453B9A83 /* Build configuration list for PBXNativeTarget "iOSDFULibrary" */;
+			buildPhases = (
+				676DC10DE5EF9FC410DAF44E238E267C /* Sources */,
+				BE8062B1EA73C0788A77D1BEC88A5112 /* Frameworks */,
+				37ADE5075FF8178853B1A5F4434D07C3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF61DF48D426C5344B04392F48B2FA74 /* PBXTargetDependency */,
+			);
+			name = iOSDFULibrary;
+			productName = iOSDFULibrary;
+			productReference = E196256A3577AC7EE1457211EB8932B1 /* iOSDFULibrary.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6DE24706FE9CF4E6C5DB4508F180A481 /* Zip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9D29C9A0296183A72406337A608A484 /* Build configuration list for PBXNativeTarget "Zip" */;
+			buildPhases = (
+				7F8BFA09A2CE47432F43BEFA34547EF6 /* Sources */,
+				65256EE91631C3389C32CF9A5C33BFE0 /* Frameworks */,
+				D7E5ACCD9439D9B4B93818039F858A33 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Zip;
+			productName = Zip;
+			productReference = 87CAFB26B21FF6DEACAC83803208FEAE /* Zip.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8DE7FC4CDDD200F23AD628CCFECFE1A7 /* Pods-LGBluetoothExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9305C17A1B4FB074B695A25CB15C5FE5 /* Build configuration list for PBXNativeTarget "Pods-LGBluetoothExample" */;
+			buildPhases = (
+				41B26EDFC6675E8C6C88C91029BDBAD2 /* Sources */,
+				3F9134A25F2008CB63B3E36E999B1CCA /* Frameworks */,
+				DDBB7B3DB8B9BA31D6FCC79055AD202A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92F5395A478F1FF21095C5C0CC30F0D7 /* PBXTargetDependency */,
+				5CDB160B5557A5976AEA0BC654C87BF2 /* PBXTargetDependency */,
+				899EF910D615B6885931CCA6A56BC766 /* PBXTargetDependency */,
+				420177CBAE8A23331084B8F8A3F2B020 /* PBXTargetDependency */,
+			);
+			name = "Pods-LGBluetoothExample";
+			productName = "Pods-LGBluetoothExample";
+			productReference = 7E9A695F70554D166B42E871203AB10F /* Pods_LGBluetoothExample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BE77DCBA10C4CF61745F1D79977081B7 /* SVProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0033308A75A44E2B00BC22A016DB9809 /* Build configuration list for PBXNativeTarget "SVProgressHUD" */;
+			buildPhases = (
+				E5CEB9D55C90766CBDCE8C5EFE51CA43 /* Sources */,
+				90EF541036EED2F4F41BA4140033B3B6 /* Frameworks */,
+				FFB60A35ECB5C24A829589D4BE67ED45 /* Headers */,
+				4351165953B317368ED43CAC1DC14858 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SVProgressHUD;
+			productName = SVProgressHUD;
+			productReference = 933F541E3E967CE8F15C116A76955D96 /* SVProgressHUD.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 934B8B1A35CA15615F1F79DE52559B9A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				570B1EFB2D11F5B06166FDA2A614F81C /* iOSDFULibrary */,
+				0D83E505BF1E81A4AAA9A3A5CAA45E9E /* JDStatusBarNotification */,
+				8DE7FC4CDDD200F23AD628CCFECFE1A7 /* Pods-LGBluetoothExample */,
+				BE77DCBA10C4CF61745F1D79977081B7 /* SVProgressHUD */,
+				6DE24706FE9CF4E6C5DB4508F180A481 /* Zip */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4351165953B317368ED43CAC1DC14858 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA43E70F88D2F9BF2AD93B43A18CC472 /* SVProgressHUD.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		41B26EDFC6675E8C6C88C91029BDBAD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8737F6D03EEC27F3A0132F66053A5DFF /* Pods-LGBluetoothExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		676DC10DE5EF9FC410DAF44E238E267C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0005F53BCA7BC904E91F5DDF756F395 /* crc32.swift in Sources */,
+				950F6A52A644AFB81473077D46D6A130 /* Data.swift in Sources */,
+				61CBAA381E8DAECDD3BDB958526E02C3 /* DFUController.swift in Sources */,
+				324DF45ED3357CAA119EAA9D7DBB9E85 /* DFUControlPoint.swift in Sources */,
+				F6A204A5B428CABBAC973AE82FEE2784 /* DFUExecutor.swift in Sources */,
+				A29716E55C9D6029716D51F111AD3BAA /* DFUFirmware.swift in Sources */,
+				1BB77E9BE15CF5EEC753C261A06F385B /* DFUPacket.swift in Sources */,
+				4472DA256EFDBFB7F2C248356B946B95 /* DFUPeripheral.swift in Sources */,
+				9361B1BA48C36AC1CF4C723E7915C37D /* DFUPeripheralDelegate.swift in Sources */,
+				363B82333E44E82267E47E4AE8B46B02 /* DFUPeripheralSelector.swift in Sources */,
+				2E6C3C73FA8B97E497388F2920342408 /* DFUPeripheralSelectorDelegate.swift in Sources */,
+				462FD86D2E3E911441454D47F20EABA4 /* DFUService.swift in Sources */,
+				E4B4511367E7EB6765F7C7ECE4DFF253 /* DFUServiceController.swift in Sources */,
+				6660C3B944EC92C33E40D3C60D0B5DCC /* DFUServiceDelegate.swift in Sources */,
+				5644BF44151D5AB3F2CBB8EB6B6D6F44 /* DFUServiceInitiator.swift in Sources */,
+				FB03F80233DCC4DCCB295EA77E7E48A8 /* DFUServiceSelector.swift in Sources */,
+				3584309C9C2541AEA48E2B74C3DDA60D /* DFUStarterPeripheral.swift in Sources */,
+				A8629D12FAB72ACAD4175D85E022F4D5 /* DFUStream.swift in Sources */,
+				D490C2F75D77E34F4927D944CC8FCCAE /* DFUStreamBin.swift in Sources */,
+				3BD629B12DC96CC4BE80DC44AF9FCE7D /* DFUStreamHex.swift in Sources */,
+				791DAA949CC3C23C1712F9FE562560BE /* DFUStreamZip.swift in Sources */,
+				665E1951D3AA233841442B7B1E28FF70 /* DFUVersion.swift in Sources */,
+				15AB02AEE6262A2ABF77063288E0EAB2 /* Double.swift in Sources */,
+				257D501B3FB2B3C88BC1A5A69BA83CD7 /* ExperimentalButtonlessDFU.swift in Sources */,
+				5B79EE1FA0B18CCD252E9065DFABD834 /* IntelHex2BinConverter.m in Sources */,
+				7063DB5BD812F0131C599EF9C9D8AC43 /* iOSDFULibrary-dummy.m in Sources */,
+				66EF39EB9CE58B25D15D6370451A9CA4 /* LegacyDFUExecutor.swift in Sources */,
+				C8BC42883EE3C6487A78F59BDCF597A8 /* LegacyDFUPeripheral.swift in Sources */,
+				6E63EAEC9E138E1D1BF81EFB47D5E3BC /* LegacyDFUPeripheralDelegate.swift in Sources */,
+				02AF8B96E19007790F4E1DBB31DC1B85 /* LegacyDFUService.swift in Sources */,
+				2B2484A6DAFA32E18EE7058AC927CCF9 /* LegacyDFUServiceInitiator.swift in Sources */,
+				1521A78DC3CCD6049E180AC99DC6DD83 /* LoggerDelegate.swift in Sources */,
+				B3F25ADC850701A6919764AD1EAD34F2 /* LoggerHelper.swift in Sources */,
+				74C89A46013F3F6AAA93D930F5C24472 /* Manifest.swift in Sources */,
+				DA62B954B4817184DDAFC4A8760AD25B /* ManifestFirmwareInfo.swift in Sources */,
+				0B4523995B7ABC300D963EDA19884C96 /* SecureDFUControlPoint.swift in Sources */,
+				9D6B70F1FBDA9819AA53102CE95A559C /* SecureDFUExecutor.swift in Sources */,
+				1CCA821DFE6F8EC02D76AB85C5B92431 /* SecureDFUPacket.swift in Sources */,
+				4437E070109A3AEF263C76C444B3B233 /* SecureDFUPeripheral.swift in Sources */,
+				30C84EC7453606FF91CCF27C5FC3913A /* SecureDFUPeripheralDelegate.swift in Sources */,
+				3DC8D32FF2B3D52D6501B507DE1EE668 /* SecureDFUService.swift in Sources */,
+				BF6C3BFDCE013088F862A9FFA2DE7CD6 /* SecureDFUServiceInitiator.swift in Sources */,
+				7C3B0307B141CBB8E4D9D0113138C400 /* SoftdeviceBootloaderInfo.swift in Sources */,
+				4C3DBC954F9F35B7D7608E9D47C8CFB1 /* ZipArchive.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77C53A47F3D31284ED2A42F6FBFE1D84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F37B083D08E038CB54320E6B7AF3D9DE /* JDStatusBarNotification-dummy.m in Sources */,
+				7F1CB290075CEBBE24BD935AC0C1586C /* JDStatusBarNotification.m in Sources */,
+				FCC5656E8803B647779563900F164225 /* JDStatusBarStyle.m in Sources */,
+				3DCA052FAD41940F6C55C6C86C2F28BA /* JDStatusBarView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F8BFA09A2CE47432F43BEFA34547EF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8819E4624E16D8177A9899E340C35AA /* ioapi.c in Sources */,
+				4B12C32A76B1CE1E3EBA3FE5EF36FDD3 /* QuickZip.swift in Sources */,
+				D755535B0DF8EE88DBCCA40AF73A8CBE /* unzip.c in Sources */,
+				B5252700B06A7CEE763E68B5ECF69C78 /* Zip-dummy.m in Sources */,
+				1C845F8441007558AE7386064FE833AD /* zip.c in Sources */,
+				48EE55BDBD977CF0E0B59A56C6329901 /* Zip.swift in Sources */,
+				D2B25EDC91A9E93A3A099B1EB385E320 /* ZipUtilities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5CEB9D55C90766CBDCE8C5EFE51CA43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				077316421ED6B26EAB78A12926A6A9F0 /* SVIndefiniteAnimatedView.m in Sources */,
+				11F18AA1A6A0D031B5405D349A3DAB31 /* SVProgressAnimatedView.m in Sources */,
+				94CEFF678852278337AD9A9974DC2DC1 /* SVProgressHUD-dummy.m in Sources */,
+				845A9D0DE7DB7ADA1C834D1962570461 /* SVProgressHUD.m in Sources */,
+				97DC4798AABA5EBAC6D00DD9E8884115 /* SVRadialGradientLayer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		420177CBAE8A23331084B8F8A3F2B020 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iOSDFULibrary;
+			target = 570B1EFB2D11F5B06166FDA2A614F81C /* iOSDFULibrary */;
+			targetProxy = 1CFC4BD3A184C6ABE9A2A74501A45FD1 /* PBXContainerItemProxy */;
+		};
+		5CDB160B5557A5976AEA0BC654C87BF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SVProgressHUD;
+			target = BE77DCBA10C4CF61745F1D79977081B7 /* SVProgressHUD */;
+			targetProxy = 7945ED225FDDD2E64539F9E711C82BBD /* PBXContainerItemProxy */;
+		};
+		899EF910D615B6885931CCA6A56BC766 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Zip;
+			target = 6DE24706FE9CF4E6C5DB4508F180A481 /* Zip */;
+			targetProxy = 9B52C3E672022E7B3495DB2556EA0069 /* PBXContainerItemProxy */;
+		};
+		92F5395A478F1FF21095C5C0CC30F0D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JDStatusBarNotification;
+			target = 0D83E505BF1E81A4AAA9A3A5CAA45E9E /* JDStatusBarNotification */;
+			targetProxy = 0CBC6108682FFADD50BE72EB557F09A5 /* PBXContainerItemProxy */;
+		};
+		FF61DF48D426C5344B04392F48B2FA74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Zip;
+			target = 6DE24706FE9CF4E6C5DB4508F180A481 /* Zip */;
+			targetProxy = F090DFC5DE05C05BCF027F5A7E1C58F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		18364A13EF47CC35AEFF5DFA576EB5DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72B2F9516E8E208A51E5C3CB24D05720 /* Zip.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Zip/Zip-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Zip/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Zip/Zip.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Zip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1EECADE69716E8172EE2D8166D47DA2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9229F5BA2E5C87BCB861B6F00F87ABC /* Pods-LGBluetoothExample.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LGBluetoothExample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LGBluetoothExample/Pods-LGBluetoothExample.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LGBluetoothExample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		20DAFF2EDD992647E80AB3F5CDB27DB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 044E0EDAF6E36A7EED553D83BE20F090 /* SVProgressHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SVProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		414CF6E6556C83F8D9B3AD9F83E26D33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72B2F9516E8E208A51E5C3CB24D05720 /* Zip.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Zip/Zip-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Zip/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Zip/Zip.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Zip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		47C8D9C439B561084123AD9D7CE47D92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 782981B2A0AFC00CC432889BEA5FAC78 /* JDStatusBarNotification.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JDStatusBarNotification/JDStatusBarNotification-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JDStatusBarNotification/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JDStatusBarNotification/JDStatusBarNotification.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = JDStatusBarNotification;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		684382203AA84E30C17C81C978C54C59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 044E0EDAF6E36A7EED553D83BE20F090 /* SVProgressHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SVProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B55A04975B6AD57713943D957A95CD5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F30935E7098798B176AC654A64904A45 /* Pods-LGBluetoothExample.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LGBluetoothExample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LGBluetoothExample/Pods-LGBluetoothExample.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LGBluetoothExample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C9EC7D382F3C912ED7642E2F4E7FE1EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 782981B2A0AFC00CC432889BEA5FAC78 /* JDStatusBarNotification.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JDStatusBarNotification/JDStatusBarNotification-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JDStatusBarNotification/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JDStatusBarNotification/JDStatusBarNotification.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = JDStatusBarNotification;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D491F1BB0D1E5726E66A6350D315C1ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FB0BD8CE8A1A3ACAF627F20BE801022 /* iOSDFULibrary.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/iOSDFULibrary/iOSDFULibrary-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iOSDFULibrary/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/iOSDFULibrary/iOSDFULibrary.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = iOSDFULibrary;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E033FEEFC1DCF0BC57D855EF5C9CA0D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FB0BD8CE8A1A3ACAF627F20BE801022 /* iOSDFULibrary.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/iOSDFULibrary/iOSDFULibrary-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iOSDFULibrary/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/iOSDFULibrary/iOSDFULibrary.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = iOSDFULibrary;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0033308A75A44E2B00BC22A016DB9809 /* Build configuration list for PBXNativeTarget "SVProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				684382203AA84E30C17C81C978C54C59 /* Debug */,
+				20DAFF2EDD992647E80AB3F5CDB27DB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FE069DE3284CB945AAF219846499B56 /* Build configuration list for PBXNativeTarget "JDStatusBarNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47C8D9C439B561084123AD9D7CE47D92 /* Debug */,
+				C9EC7D382F3C912ED7642E2F4E7FE1EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
+				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46EC2299A313886B883737DA453B9A83 /* Build configuration list for PBXNativeTarget "iOSDFULibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E033FEEFC1DCF0BC57D855EF5C9CA0D6 /* Debug */,
+				D491F1BB0D1E5726E66A6350D315C1ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9305C17A1B4FB074B695A25CB15C5FE5 /* Build configuration list for PBXNativeTarget "Pods-LGBluetoothExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B55A04975B6AD57713943D957A95CD5E /* Debug */,
+				1EECADE69716E8172EE2D8166D47DA2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9D29C9A0296183A72406337A608A484 /* Build configuration list for PBXNativeTarget "Zip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18364A13EF47CC35AEFF5DFA576EB5DD /* Debug */,
+				414CF6E6556C83F8D9B3AD9F83E26D33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

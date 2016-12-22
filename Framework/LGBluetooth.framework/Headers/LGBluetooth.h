@@ -26,7 +26,7 @@
 #import <LGBluetooth/LGCurrentSportDataCmd.h>
 #import <LGBluetooth/LGHistorySportDataCmd.h>
 #import <LGBluetooth/LGHistorySleepDataCmd.h>
-#import <LGBluetooth/LGHistoryHeartRateDataCmd.h>
+#import <LGBluetooth/LGHistoryBodyDataCmd.h>
 #import <LGBluetooth/LGSportGoalsCmd.h>
 #import <LGBluetooth/LGCleanUpSleepDataCmd.h>
 #import <LGBluetooth/LGCleanUpSportDataCmd.h>
@@ -52,3 +52,5 @@
 #import <LGBluetooth/NSError+Peripheral.h>
 #import <LGBluetooth/LGGPSInfoCmd.h>
 #import <LGBluetooth/LGMapDataManager.h>
+#import <LGBluetooth/LGGolfScoresCmd.h>
+#import <LGBluetooth/LGCleanUpGolfDataCmd.h>

@@ -1,0 +1,6 @@
+framework module Pods_LGBluetoothExample {
+  umbrella header "Pods-LGBluetoothExample-umbrella.h"
+
+  export *
+  module * { export * }
+}
