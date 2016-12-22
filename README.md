@@ -30,4 +30,4 @@ LGBluetooth是iOS的动态框架，使用Objective-C语言开发，封装了智�
 | 1.1   | 2016-10-21 | 增加地图升级功能 |
 | 1.1.1   | 2016-11-25 | 稳定性修复  |
 | 1.1.2   | 2016-12-16 | 1. **LGBluetooth.framework** 更新，只包含真机arch；地图包发送数据的速率降低一些，避免蓝牙卡死 <br> 2. Example 更新到最新的DFU接口  |
-
+| 1.2.0| 2016-12-22| 1.心率数据和 PRV 数据合并为体征 数据，类是`LGHistoryBodyDataCmd` <br> 2.增加高尔夫分数读取类`LGGolfScoresCmd`,清空高尔夫数据类`LGCleanUpGolfDataCmd` <br> 3.修改固件升级的逻辑，可升级进入升级模式的设备(名字以"OTA_"开头的设备)；并且升级到最新的 Nordic DFU库|

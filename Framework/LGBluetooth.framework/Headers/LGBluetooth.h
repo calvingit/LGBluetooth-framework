@@ -30,7 +30,7 @@
 #import <LGBluetooth/LGSportGoalsCmd.h>
 #import <LGBluetooth/LGCleanUpSleepDataCmd.h>
 #import <LGBluetooth/LGCleanUpSportDataCmd.h>
-#import <LGBluetooth/LGCleanUpHeartRateDataCmd.h>
+#import <LGBluetooth/LGCleanUpBodyDataCmd.h>
 #import <LGBluetooth/LGHeartRateSampleIntervalCmd.h>
 #import <LGBluetooth/LGScreenTimeCmd.h>
 #import <LGBluetooth/LGScreenOrientationCmd.h>

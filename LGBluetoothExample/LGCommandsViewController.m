@@ -433,7 +433,7 @@
     }
     
     else if (row == 25){
-        LGCleanUpHeartRateDataCmd *cmd = [LGCleanUpHeartRateDataCmd commandWithAgent:self.agent];
+        LGCleanUpBodyDataCmd *cmd = [LGCleanUpBodyDataCmd commandWithAgent:self.agent];
         [cmd startWithSuccess:^{
             [self showAlert:_commands[row] msg: @"成功"];
         } failure:^(NSError *error) {
@@ -775,7 +775,6 @@
         } failure:^(NSError *error) {
             [self showAlert:_commands[row] msg:error.localizedDescription];
         }];
-        [cmd start];
     }
     else {
         [SVProgressHUD dismiss];

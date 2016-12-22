@@ -101,6 +101,7 @@ LGHistorySleepDataCmd *cmd = [[LGHistorySleepDataCmd alloc] initWithPeripheralAg
 
 ### 清空历史睡眠数据(LGCleanUpSleepDataCmd)
 如运动数据一样，同步完成之后，可以清空历史数据。
+
 ```
 LGCleanUpSleepDataCmd *cmd = [LGCleanUpSleepDataCmd commandWithAgent:self.agent];
 [cmd startWithSuccess:^{
@@ -111,34 +112,38 @@ LGCleanUpSleepDataCmd *cmd = [LGCleanUpSleepDataCmd commandWithAgent:self.agent]
 
 ```
 
-## 心率数据
-心率数据类是`LGHeartRateData`，只有两个属性:
-- value 心率值
-- date   测量的时间
+## 体征数据
 
-### 读取历史心率数据(LGHistoryHeartRateDataCmd)
-成功回调是`LGHistoryHeartRateDataBlock`，参数返回`LGHeartRateData`类型的数组。
+体征数据类是`LGBodyData `，只有两个属性:
+- hr 心率值
+- prv PRV值
+- date  测量的时间
+
+### 读取历史体征数据(LGHistoryBodyDataCmd)
+成功回调是`LGHistoryBodyDataBlock`，参数返回`LGBodyData`类型的数组。
 
 使用方法如下：
+
 ```
-LGHistoryHeartRateDataCmd *cmd = [[LGHistoryHeartRateDataCmd alloc] initWithPeripheralAgent:self.agent];
-[[cmd readDataWithSuccess:^(NSArray<LGHeartRateData *> *datas) {
+LGHistoryBodyDataCmd *cmd = [[LGHistoryBodyDataCmd alloc] initWithPeripheralAgent:self.agent];
+[[cmd readDataWithSuccess:^(NSArray<LGBodyData *> *datas) {
     [self performSegueWithIdentifier:kShowTextSegueID sender:datas.description];
 } failure:^(NSError *error) {
-    [self showAlert:_commands[row] msg: error.description];
+    [self showAlert:_commands[row] msg: error.localizedDescription];
 }] start];
 ```
 
-### 清空历史心率数据(LGCleanUpHeartRateDataCmd)
+### 清空历史体征数据(LGCleanUpBodyDataCmd)
 如运动数据一样，同步完成之后，可以清空历史数据。
 
 使用方法如下:
+
 ```
-LGCleanUpHeartRateDataCmd *cmd = [LGCleanUpHeartRateDataCmd commandWithAgent:self.agent];
+LGCleanUpBodyDataCmd *cmd = [LGCleanUpBodyDataCmd commandWithAgent:self.agent];
 [cmd startWithSuccess:^{
     [self showAlert:_commands[row] msg: @"成功"];
 } failure:^(NSError *error) {
-    [self showAlert:_commands[row] msg: error.description];
+    [self showAlert:_commands[row] msg: error.localizedDescription];
 }];
 ```
 
@@ -194,5 +199,40 @@ LGCleanUpGPSDataCmd *cmd = [LGCleanUpGPSDataCmd commandWithAgent:self.agent];
     [self showAlert:_commands[row] msg:@"成功"];
 } failure:^(NSError *error) {
     [self showAlert:_commands[row] msg:error.description];
+}];
+```
+
+## 高尔夫分数数据
+
+### 读取高尔夫分数历史数据（LGGolfScoresCmd）
+
+分数使用类`LGGolfScore`表示，包含：
+
+- date：日期
+- courseName：球场名字
+- scores：分数数组，数组子项为字典，key是杆数，value是分数
+
+使用方法：
+
+```
+LGGolfScoresCmd *cmd = [LGGolfScoresCmd commandWithAgent:self.agent];
+[cmd readScoresWithSuccess:^(NSArray<LGGolfScore *> *scores) {
+    NSLog(@"Golf Scores:%@", scores);
+    [SVProgressHUD dismiss];
+} failure:^(NSError *error) {
+    [self showAlert:_commands[row] msg:error.localizedDescription];
+}];
+[cmd start];
+```
+
+### 清空高尔夫分数历史数据（LGCleanUpGolfDataCmd）
+使用方法：
+
+```
+LGCleanUpGolfDataCmd *cmd = [LGCleanUpGolfDataCmd commandWithAgent:self.agent];
+[cmd startWithSuccess:^{
+    [self showAlert:_commands[row] msg:@"成功"];
+} failure:^(NSError *error) {
+    [self showAlert:_commands[row] msg:error.localizedDescription];
 }];
 ```

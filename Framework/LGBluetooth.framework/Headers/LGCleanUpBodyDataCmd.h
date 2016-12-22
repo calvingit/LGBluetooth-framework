@@ -7,8 +7,8 @@
 
 #import "LGBaseSettingCommand.h"
 /**
- *  清空心率数据
+ *  清空体征数据
  */
-@interface LGCleanUpHeartRateDataCmd : LGBaseSettingCommand
+@interface LGCleanUpBodyDataCmd : LGBaseSettingCommand
 
 @end
