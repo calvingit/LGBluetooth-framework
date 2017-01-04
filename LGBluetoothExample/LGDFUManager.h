@@ -2,7 +2,7 @@
 // LGBluetooth
 //
 // Created by : zhangwen
-// Copyright (C) zhangwen. All rights reserved.
+// Copyright (C) 2016 zhangwen. All rights reserved.
 //
 
 @import Foundation;
@@ -61,7 +61,7 @@
  *  @param agent     升级设备
  *
  */
-- (instancetype)initWithPeripheralAgent:(LGPeripheralAgent *)agent;
+- (instancetype)initWithPeripheral:(LGPeripheral *)aPeripheral;
 
 /**
  *  开始升级

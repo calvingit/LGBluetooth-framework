@@ -9,6 +9,7 @@
 #import "LGBaseCommand.h"
 
 @class LGGolfScore;
+@class LGParScore;
 
 /**
  高尔夫数据回调
@@ -30,10 +31,21 @@ typedef void(^LGGolfScoresCmdBlock)(NSArray<LGGolfScore *> *scores);
  高尔夫分数数据
  */
 @interface LGGolfScore : NSObject
-//日期
+//日期(测试阶段有可能为空)
 @property (nonatomic, strong) NSDate *date;
-//记分，数组子项为字典，key是杆数，value是分数
-@property (nonatomic, copy) NSArray<NSDictionary *> *scores;
+//记分
+@property (nonatomic, copy) NSArray<LGParScore *> *scores;
 //球场名字
 @property (nonatomic, copy) NSString *courseName;
+@end
+
+
+/**
+ 记分
+ */
+@interface LGParScore : NSObject
+//杆数Par
+@property (nonatomic, assign) NSInteger par;
+//分数score
+@property (nonatomic, assign) NSInteger score;
 @end

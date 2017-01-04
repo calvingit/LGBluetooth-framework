@@ -34,8 +34,8 @@
     
     [self updateFiles];
     
-    LGPeripheralAgent *agent = [[LGPeripheralAgent alloc] initWithPeripheral:self.peripheral];
-    self.dfuManager = [[LGDFUManager alloc] initWithPeripheralAgent:agent];
+
+    self.dfuManager = [[LGDFUManager alloc] initWithPeripheral:self.peripheral];
 }
 
 - (void)updateFiles{
