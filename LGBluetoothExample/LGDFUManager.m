@@ -111,7 +111,7 @@
  扫描升级设备
  */
 - (void)scanDFUDevice{
-    [self.centralManager scanForPeripheralsWithServices:@[[CBUUID UUIDWithString:kDFUServiceUUID]] options:@{CBCentralManagerScanOptionAllowDuplicatesKey:@YES}];
+    [self.centralManager scanForPeripheralsWithServices:nil options:@{CBCentralManagerScanOptionAllowDuplicatesKey:@YES}];
     self.scanTimer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(timeoutForScanning) userInfo:nil repeats:NO];
 }
 
